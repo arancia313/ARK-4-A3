@@ -64,6 +64,7 @@ as well as unique and exclusive new features not found anywhere else.
 ##### Permanent CFW via cIPL
 
 - Works on all PSP models, including testkits and devkits.
+- ARK-4 A3 completely accepts cIPL, but be careful not to destroy your psp...
 - Installer will choose the correct version according to your model.
 - Some models can install either the Classic cIPL or the New cIPL.
 - Copy `ARK_cIPL` folder to `/PSP/GAME/` and run the program.
@@ -84,14 +85,14 @@ as well as unique and exclusive new features not found anywhere else.
 ##### Time Machine and Despertar del Cementerio
 
 - `Time Machine` allows the ability to boot the `6.61` firmware and `ARK` entirely from the Memory Stick.
-- `Despertar del Cementerio` allows the ability to revive a bricked PSP when used in combination with a `Pandora` or `Baryon Sweeper`.
+- `Despertar del Cementerio` allows the ability to revive a bricked PSP when used in combination with a `Pandora, OR Whatever modded sony battery you have` or `Baryon Sweeper`.
 - You can install `DC-ARK` either using a `PSP` or a `PC` (Windows, Mac and Linux).
-- On `PSP` you need to be running a `CFW` to install `DC-ARK` (ARK itself or any other).
+- On `PSP` you need to be running a `CFW, custom firmware` to install `DC-ARK` (ARK itself or any other).
 - Copy the `ARK_DC` folder to the `/PSP/GAME/` folder and run the installer from the `XMB`.
 - Copy the 6.61 Official Firmware Update by Sony renamed to `661.PBP` at the root of the memory stick.
 - Follow the instructions to install DC-ARK and create a magic memory stick.
-- On `PC`, you need `Python 3` and run `MagicMemoryCreator` with `admin`/`root` privileges.
-- You can use New cIPL to boot into DC-ARK by holding L-trigger when powering on.
+- On `PC`, you obviously need `Python 3` and run `MagicMemoryCreator` with `admin`/`root` privileges.
+- You can use the provided New cIPL to boot into DC-ARK by holding L-trigger when powering on.
 - Or use a `Pandora` or `Baryon Sweeper` in combination with your newly created `Magic Memory Stick` to boot up `Despertar del Cementerio`.
 - On compatible models, you can use `Advanced VSH Menu` to create a `Pandora Battery`.
 - From here you can either boot ARK from memory stick, install 6.61 Firmware with ARK on the NAND or install 6.61 Official Firmware.
@@ -100,7 +101,7 @@ as well as unique and exclusive new features not found anywhere else.
 #### Installation On PS Vita
 
 There are two types of installation on PS Vita. You can use either one or both.
-<br>Stanalone works on top of the original unmodified pspemu.
+<br>Standalone works on top of the original unmodified pspemu.
 <br>You an also run ARK within Adrenaline to achieve a Hybrid CFW.
 
 
