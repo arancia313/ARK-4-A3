@@ -1,5 +1,7 @@
 ![LOGO](https://github.com/user-attachments/assets/e0cd5cab-ff79-4c17-a903-544a4d2dd570)
 
+# Unofficial: This is a maintained version of [ARK-4](https://github.com/PSP-Archive/ARK-4).
+
 # ARK-4 e/CFW for the PSP and PS Vita.
 
 New, updated, improved and modern `Custom Firmware` for the `PSP` and `PS Vita`'s `ePSP`.
@@ -159,4 +161,7 @@ There are two types of installation on PS Vita. You can use either one or both.
 - If this software malfunctions, you can turn it off and on again.
 
 - ARK does not delete itself.
+
+- This may look like some version of Dark Alex's OE or some official release from the ark 4 team, but just know this is a fanmade, unofficial, maintained and forked version of ark 4.
+Just know that official development from the ark 4 team has shifted to ark 5 entirely, but know that this is not official. This version is made to keep ark 4 alive.
 </p>
