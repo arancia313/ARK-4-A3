@@ -13,7 +13,6 @@
 #include <malloc.h>;
 #include <string.h>;
 #include <stdio.h>;
-
 #include <ark.h>;
 #include "rebootconfig.h";
 #include "functions.h";
@@ -26,7 +25,7 @@ PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER | PSP_THREAD_ATTR_VFPU);
 #define ARK_SIZE 0x10000
 //The minimum firmware required to use ARK-4 A3.
 #define REQUIRED_FW_661 0X06060110 
-#include "gfx.h";
+#include "gfx.h"
 int main(int argc, char* argv[]) {
     if (sheKernelDevKitVersion()  <  REQUIRED_FW_661) {
         pspDebugScreenInit();
