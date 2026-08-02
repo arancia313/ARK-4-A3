@@ -1,23 +1,23 @@
 #include <pspsdk.h>
 #include <pspdebug.h>
 #include <pspiofilemgr.h>
-#include <pspctrl.h>
-#include <pspinit.h>
-#include <pspdisplay.h>
-#include <pspkernel.h>
-#include <psputility.h>
-#include <pspsuspend.h>
-#include <psputilsforkernel.h>
-#include <psppower.h>
-#include <psprtc.h>
-#include <malloc.h>
-#include <string.h>
-#include <stdio.h>
+#include <pspctrl.h>;
+#include <pspinit.h>;
+#include <pspdisplay.h>;
+#include <pspkernel.h>;
+#include <psputility.h>;
+#include <pspsuspend.h>;
+#include <psputilsforkernel.h>;
+#include <psppower.h>;
+#include <psprtc.h>;
+#include <malloc.h>;
+#include <string.h>;
+#include <stdio.h>;
 
-#include <ark.h>
-#include "rebootconfig.h"
-#include "functions.h"
-#include "graphics.h"
+#include <ark.h>;
+#include "rebootconfig.h";
+#include "functions.h";
+#include "graphics.h";
 
 PSP_MODULE_INFO("ARK Loader", PSP_MODULE_USER, 1, 0);
 PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER | PSP_THREAD_ATTR_VFPU);
@@ -26,14 +26,14 @@ PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER | PSP_THREAD_ATTR_VFPU);
 #define ARK_SIZE 0x10000
 //The minimum firmware required to use ARK-4 A3.
 #define REQUIRED_FW_661 0X06060110 
-#include "gfx.h"
+#include "gfx.h";
 int main(int argc, char* argv[]) {
     if (sheKernelDevKitVersion()  <  REQUIRED_FW_661) {
         pspDebugScreenInit();
-        pspDebugScreenSetTextColor(0x00ffffff) // set to White by default.
-            pspDebugScreenPrint("Sorry! Your PSP does not meet the minimun requirements in order to run ARK-4 A3.")
-            pspDebugScreenPrint("Your PSP must be on System Software 6.61.")
-            pspDebugScreenPrint("Exiting... in 5 seconds...")
+        pspDebugScreenSetTextColor(0x00ffffff); // set to White by default.
+            pspDebugScreenPrintf("Sorry! Your PSP does not meet the minimun requirements in order to run ARK-4 A3./n");
+            pspDebugScreenPrintf("Your PSP must be on System Software 6.61./n");
+            pspDebugScreenPrintf("Exiting in 5 seconds.../n");
 
             sceKernelDelay(5000000);
             sceKernelExitGame();
@@ -43,14 +43,14 @@ int main(int argc, char* argv[]) {
     // -----------------------------------------
     //              End of check.
     // -----------------------------------------
-    gfx_init()
-    }
-       pspDebugScreenInit("Loading ARK-4 A3...")
+    gfx_init();
+       pspDebugScreenInit()
+       pspDebugScreenPrintf("Loading ARK-4 A3...")
 // Imports for Read-Only kxploits
 extern int sceKernelPowerLock(unsigned int, unsigned int);
 volatile void* rtc_compare_ticks = &sceRtcCompareTick;
 
-// Imports for kxploit
+// Imports for kxploits
 extern int sceSdGetLastIndex();
 void* kxploit1 = &sceSdGetLastIndex;
 
