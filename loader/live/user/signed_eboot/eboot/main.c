@@ -24,7 +24,28 @@ PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER | PSP_THREAD_ATTR_VFPU);
 
 #define ARK_LOADADDR 0x08D30000
 #define ARK_SIZE 0x10000
+//The minimum firmware required to use ARK-4 A3.
+#define REQUIRED_FW_661 0X06060110 
+#include "gfx.h"
+int main(int argc, char* argv[]) {
+    if (sheKernelDevKitVersion()  <  REQUIRED_FW_661) {
+        pspDebugScreenInit();
+        pspDebugScreenSetTextColor(0x00ffffff) // set to White by default.
+            pspDebugScreenPrint("Sorry! Your PSP does not meet the minimun requirements in order to run ARK-4 A3.")
+            pspDebugScreenPrint("Your PSP must be on System Software 6.61.")
+            pspDebugScreenPrint("Exiting... in 5 seconds...")
 
+            sceKernelDelay(5000000);
+            sceKernelExitGame();
+        return 0;
+    }
+
+    // -----------------------------------------
+    //              End of check.
+    // -----------------------------------------
+    gfx_init()
+    }
+       pspDebugScreenInit("Loading ARK-4 A3...")
 // Imports for Read-Only kxploits
 extern int sceKernelPowerLock(unsigned int, unsigned int);
 volatile void* rtc_compare_ticks = &sceRtcCompareTick;
