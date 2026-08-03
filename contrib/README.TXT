@@ -1,6 +1,6 @@
 Installation On PSP
   
-- Copy `ARK_01234` folder into `/PSP/SAVEDATA/` folder.
+- Copy `ARK_A3000` folder into `/PSP/SAVEDATA/` folder.
 - Copy `ARK_Loader` folder into `/PSP/GAME/` folder.
 - Launch `ARK Loader`. It will install ARK modules on PSP Flash and boot the CFW.
 - At this point `ARK` will work as a `Live CFW`, meaning that `ARK Loader` will need to be run every time the console is turned off or rebooted.
@@ -66,7 +66,7 @@ You an also run ARK within Adrenaline to achieve a Hybrid CFW.
   Adrenaline (Patched PSPEmu)
 
     - Works on Firmware 3.60 up to 3.74, requires Henkaku/h-encore and `Adrenaline` (https://github.com/isage/Adrenaline).
-    - (Skip this step if `Standalone` is already installed) Install `ARK_01234` folder into `/PSP/SAVEDATA/` folder.
+    - (Skip this step if `Standalone` is already installed) Install `ARK_A3000` folder into `/PSP/SAVEDATA/` folder.
     - Install `ARK_Loader` folder into `/PSP/GAME/` folder.
     - To make ARK-4 automatically load with Adrenaline there are two options.
     - (Option 1, new method) Rename `ARK_Loader` (installed previously) to `BOOT`.
@@ -84,4 +84,4 @@ Updating ARK
 
     - Option 1: Use the `System Update` feature in the XMB. Requires your PSP/Vita to be connected to the internet.
     - Option 2: Copy the `UPDATE` folder to `/PSP/GAME/` and run it.
-    - Option 3: Copy `ARK_01234` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
+    - Option 3: Copy `ARK_A3000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.

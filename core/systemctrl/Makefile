@@ -76,7 +76,7 @@ else
 OBJS += debug/dummy.o
 endif
 
-PSP_FW_VERSION = 660
+PSP_FW_VERSION = 661
 
 include $(ARKROOT)/common/make/global.mak
 PSPSDK=$(shell psp-config --pspsdk-path)

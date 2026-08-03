@@ -100,7 +100,7 @@ extern "C" {
 #define LIVE_EXPLOIT_ID "Live" // default loader name
 #define CIPL_EXPLOIT_ID "cIPL" // loader name for Custom IPL
 #define DC_EXPLOIT_ID "DC" // loader name for Despertar del Cementerio
-#define DEFAULT_ARK_FOLDER "ARK_01234"
+#define DEFAULT_ARK_FOLDER "ARK_A3000"
 #define SAVEDATA_MS0 "ms0:/PSP/SAVEDATA/"
 #define SAVEDATA_EF0 "ef0:/PSP/SAVEDATA/"
 #define DEFAULT_ARK_PATH SAVEDATA_MS0 DEFAULT_ARK_FOLDER "/" // default path for ARK files

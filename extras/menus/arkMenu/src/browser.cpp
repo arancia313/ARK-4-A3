@@ -277,7 +277,7 @@ void Browser::installTheme() {
     };
 
     // Sanity checks
-    if(e->getName() != "THEME.ARK" || e->getPath().substr(2) == "0:/PSP/SAVEDATA/ARK_01234/THEME.ARK") return;
+    if(e->getName() != "THEME.ARK" || e->getPath().substr(2) == "0:/PSP/SAVEDATA/ARK_A3000/THEME.ARK") return;
 
     if(optionsmenu) {
         SystemMgr::pauseDraw();

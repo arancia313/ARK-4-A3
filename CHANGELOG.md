@@ -167,7 +167,7 @@ Thanks Nall for quickly testing and help get this out :+1:
 #### Rev 9
 - Fixed control issue in `ARK-X` on `Vita TV` or `MiniVitaTV` (requires updating `ps1cfw_enabler`).
 - Fixed exit-to-launcher combo on `Vita TV`/`MiniVitaTV`.
-- Fixed `FasterARK` when an `ARK_01234` savedata folder was already installed.
+- Fixed `FasterARK` when an `ARK_A3000` savedata folder was already installed.
 - Some other small cleanup and fixes.
 #### Rev 8
 - Disallow `Memory Stick Speedup` in `PS1` since it doesn't actually impact these games and causes clashes with `cwcheat`.
@@ -215,7 +215,7 @@ Thanks Nall for quickly testing and help get this out :+1:
 - Rev 8: fixed bug that would prevent installing `new cIPL` on classic models (1K and early 2K). Fixed bug in the plugins manager of classic recovery menu.
 - Rev 7: fixed `MP3` audio issues in `Custom Launcher`.
 - Rev 6: several cleanup, refactor and small fixes.
-- Rev 5: you can now change background image of `Custom Launcher` and `Recovery` by placing a file named `BG.PNG` in `ARK_01234`.
+- Rev 5: you can now change background image of `Custom Launcher` and `Recovery` by placing a file named `BG.PNG` in `ARK_A3000`.
 - Rev 4: added `alternative` kernel exploit for better stability.
 - Rev 3: unified all kernel exploits (`K.BIN`) into one, simplifying the installation process across all devices (https://github.com/PSP-Archive/ARK-4/pull/273).
 - Rev 2: fixed bug in file browser's options menu.
@@ -262,7 +262,7 @@ Thanks Nall for quickly testing and help get this out :+1:
 - https://github.com/PSP-Archive/ARK-4/releases/tag/r42063
 - Rev 2: Fixed and improved support for PSP Go models.
 - Rev 1: You can now select USB Device in Classic Recovery Menu, allows to mount flash memory for recovery operations.
-- Created `Classic Recovery Menu` for `PSP` systems with `Full Installation`, which is used when there is no `Recovery App` available (i.e. no `Memory Stick` inserted or no `ARK_01234` savedata present).
+- Created `Classic Recovery Menu` for `PSP` systems with `Full Installation`, which is used when there is no `Recovery App` available (i.e. no `Memory Stick` inserted or no `ARK_A3000` savedata present).
 - Improved `Custom Firmware Settings` in both `Recovery Menu` and `XMB`.
 - Fixed and improved `Cyrillic` fonts (https://github.com/PSP-Archive/ARK-4/pull/198).
 - Several fixes related to `Full Installations`.
@@ -473,7 +473,7 @@ Thanks Nall for quickly testing and help get this out :+1:
 ## Version 4.20.09 (2023-05-02)
 - https://github.com/PSP-Archive/ARK-4/releases/tag/r4209
 - Fixed and improved System Update patches.
-- Update server URL is now stored in UPDATER.TXT inside the ARK_01234 folder. Removing this file will leave the official System Update.
+- Update server URL is now stored in UPDATER.TXT inside the ARK_A3000 folder. Removing this file will leave the official System Update.
 - Updater is now ready, you can update to this release from 4.20.08 using System Update feature in the XMB.
 
 ## Version 4.20.08 (2023-05-01)
@@ -1015,7 +1015,7 @@ Rest In Peace Dear Friend.
 - Added "mscache" option for Memory Stick speedup.
 - Fixed handling of recovery mode (plugins and settings are disabled).
 - Restructured installation so that core CFW files are separated from loaders.
----- The default ARK installation path is /PSP/GAME/SAVEDATA/ARK_01234/
+---- The default ARK installation path is /PSP/GAME/SAVEDATA/ARK_A3000/
 ---- This makes it compatible with Live CFW, Permanent CFW and PS Vita QCMA.
 - Fixed xMenu.
 - Fixed arkMenu.

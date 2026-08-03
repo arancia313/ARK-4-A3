@@ -25,15 +25,15 @@ PSP_EBOOT_PIC1 = resources/PIC1.PNG
 
 EXTRA_TARGETS = EBOOT.PBP
 
-PSP_EBOOT_PSAR = ARK_01234.PKG
+PSP_EBOOT_PSAR = ARK_A3000.PKG
 
 EBOOT_$(MODEL).PBP: $(EXTRA_TARGETS)
 	$(Q)mv $(EXTRA_TARGETS) EBOOT_$(MODEL).PBP
 
-ARK_01234.PKG:
-	$(Q)$(PYTHON) $(ARKROOT)/contrib/PC/pack/pack.py -p ARK_01234.PKG packlist.txt -s
+ARK_A3000.PKG:
+	$(Q)$(PYTHON) $(ARKROOT)/contrib/PC/pack/pack.py -p ARK_A3000.PKG packlist.txt -s
 
-all: ARK_01234.PKG EBOOT_$(MODEL).PBP
+all: ARK_A3000.PKG EBOOT_$(MODEL).PBP
 	$(Q)rm PARAM.SFO
 
 include $(ARKROOT)/common/make/global.mak

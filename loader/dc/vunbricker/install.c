@@ -1238,7 +1238,7 @@ int install_thread(SceSize args, void *argp)
         for (int i=0; i<(sizeof(f0_ark_extras)/sizeof(f0_ark_extras[0])); i++)
         {
         	char path[ARK_PATH_SIZE];
-        	strcpy(path, "flash0:/ARK_01234/");
+        	strcpy(path, "flash0:/ARK_A3000/");
         	strcat(path, f0_ark_extras[i].orig);
         	f0_ark_extras[i].dest[3] = 'c';
         	copy_file(path, f0_ark_extras[i].dest);
