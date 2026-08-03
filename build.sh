@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 ####### ARK Builder Script ##########
 #                                   #
 # Author  : Krazynez                #
