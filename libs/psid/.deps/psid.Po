@@ -1,1 +1,0 @@
-b'psid.o .deps/psid.Po: psid.c /home/pecete/ARK-4-A3/common/include/psid.h\n'
