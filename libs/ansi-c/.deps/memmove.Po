@@ -1,0 +1,1 @@
+b'memmove.o .deps/memmove.Po: memmove.c \\\n  /home/pecete/ARK-4-A3/common/include/ansi_c_functions.h\n'

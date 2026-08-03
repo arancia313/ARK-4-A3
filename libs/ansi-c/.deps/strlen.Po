@@ -1,0 +1,1 @@
+b'strlen.o .deps/strlen.Po: strlen.c \\\n  /home/pecete/ARK-4-A3/common/include/ansi_c_functions.h\n'
