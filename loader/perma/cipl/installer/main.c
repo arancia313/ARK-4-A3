@@ -198,10 +198,10 @@ void classicipl_menu(){
     printf("install cIPL\n");
 
     if( ipl_type ) {
-        printf(" Press O to Erase cIPL and Restore Original IPL\n");
+        printf(" Press O to go back to Original Sony IPL.\n");
     }
 
-    printf(" Press R to cancel\n\n");
+    printf(" Press R to cancel.\n\n");
     
     SceCtrlData pad;
     while (1) {
