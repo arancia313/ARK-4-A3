@@ -56,12 +56,12 @@ extern "C" {
 #define FAKE_UID 0x0B00B500
 
 // Paths and other global strings
-#define FLASH0_PATH "flash0:/"
-#define FLASH1_PATH "flash1:/"
-#define VBOOT_PBP "VBOOT.PBP" // default launcher
+#define FLASH0_PATH "flash0:/" //if you don't know, this is a psp critical partition that contains the psp's entire os. A single corrupted, deleted or edited file can cause a hard brick.
+#define FLASH1_PATH "flash1:/" //if you don't know, this is a psp partition that contains your configurations.
+#define VBOOT_PBP "VBOOT.PBP" // default launcher...
 #define ARK_XMENU "XBOOT.PBP" // PS1 launcher
 #define ARK_RECOVERY "RECOVERY.PBP" // recovery app
-#define RECOVERY_PRX "RECOVERY.PRX" // Classic Recovery
+#define RECOVERY_PRX "RECOVERY.PRX" // Classic Recovery menu.
 #define FLASH0_ARK "FLASH0.ARK" // ARK flash0 package
 #define VSH_MENU "VSHMENU.PRX" // ARK VSH Menu for XMB
 #define XMBCTRL_PRX "XMBCTRL.PRX" // XMB Control
@@ -101,17 +101,17 @@ extern "C" {
 #define CIPL_EXPLOIT_ID "cIPL" // loader name for Custom IPL
 #define DC_EXPLOIT_ID "DC" // loader name for Despertar del Cementerio
 #define DEFAULT_ARK_FOLDER "ARK_A3000"
-#define SAVEDATA_MS0 "ms0:/PSP/SAVEDATA/"
-#define SAVEDATA_EF0 "ef0:/PSP/SAVEDATA/"
-#define DEFAULT_ARK_PATH SAVEDATA_MS0 DEFAULT_ARK_FOLDER "/" // default path for ARK files
-#define DEFAULT_ARK_PATH_GO SAVEDATA_EF0 DEFAULT_ARK_FOLDER "/" // default path for ARK files
-#define ARK_DC_PATH "ms0:/TM/DCARK"
+#define SAVEDATA_MS0 "ms0:/PSP/SAVEDATA/" //the directory where "ARK_A3000" is located.
+#define SAVEDATA_EF0 "ef0:/PSP/SAVEDATA/" //the directory where "ARK_A3000" is located (on pspgo internal, i think it's eflash, not flash0).
+#define DEFAULT_ARK_PATH SAVEDATA_MS0 DEFAULT_ARK_FOLDER "/" // default path for the ARK files
+#define DEFAULT_ARK_PATH_GO SAVEDATA_EF0 DEFAULT_ARK_FOLDER "/" // default path for the ARK files. I think it's the psp go in here.
+#define ARK_DC_PATH "ms0:/TM/DCARK" // This is for despertar del cementerio and time machine's components, i think.
 #define TM_PATH_W L"\\TM\\DCARK\\"
 
-// Different firmware versions
-#define FW_661 0x06060110
-#define FW_660 0x06060010
-#define FW_150 0x01050001
+// Get it? Those are different firmware versions.
+#define FW_661 0x06060110 // System Software 6.61 (It's a requirement for using ARK-4 A3).
+#define FW_660 0x06060010 // System Software 6.60.
+#define FW_150 0x01050001 // System Software 1.50.
 
 // Syscon mem address used for 1.50 resume support
 #define SYSCON_SCRATCHPAD_RESUME_FW_ADDR 0x4
