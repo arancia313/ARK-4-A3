@@ -84,44 +84,44 @@ all: subdirs cipl msipl kxploits finalspeed mkdir-dist encrypt-prx copy-dcark pa
 
 #	Common installation
 copy-bin:
-	$(Q)cp -r contrib/PSP/SAVEDATA/ARK_01234/ dist/ # ARK Savedata installation
+	$(Q)cp -r contrib/PSP/SAVEDATA/ARK_A3000/ dist/ # ARK Savedata installation
 	$(Q)cp -r contrib/PSP/GAME/ARK_DC/ dist/PSP/ # ARK DC installer
 	$(Q)cp loader/dc/installer/EBOOT.PBP dist/PSP/ARK_DC/ # ARK DC installer
 	$(Q)cp loader/vpk/bin/psp/EBOOT.PBP dist/PSVita/PSPCFW/NPUZ01234/
 	$(Q)cp loader/vpk/bin/psp/PBOOT.PBP dist/PSVita/PSPCFW/NPUZ01234/
 	$(Q)cp loader/vpk/bin/psp/arkrightanalog.suprx dist/PSVita/PSPCFW/
 	$(Q)cp loader/perma/cipl/installer/EBOOT.PBP dist/PSP/ARK_cIPL/EBOOT.PBP
-	$(Q)cp loader/live/user/linkless_payload/H.BIN dist/ARK_01234/H.BIN # game exploit loader
+	$(Q)cp loader/live/user/linkless_payload/H.BIN dist/ARK_A3000/H.BIN # game exploit loader
 	$(Q)cp loader/live/user/signed_eboot/EBOOT.PBP dist/ARK_Loader/EBOOT.PBP # Signed EBOOT
 	$(Q)cp loader/live/user/psxloader/EBOOT.PBP dist/PSVita/PS1CFW/SCPS10084/
-	$(Q)cp loader/live/kernel/chain_loader/ARK.BIN dist/ARK_01234/ARK.BIN # ARK-2 chainloader
-	$(Q)cp loader/live/kernel/kernel_loader/ARK4.BIN dist/ARK_01234/ARK4.BIN # ARK-4 loader
-	$(Q)cp loader/live/kernel/psxloader/ARKX.BIN dist/ARK_01234/ARKX.BIN # ARK-X loader
+	$(Q)cp loader/live/kernel/chain_loader/ARK.BIN dist/ARK_A3000/ARK.BIN # ARK-2 chainloader
+	$(Q)cp loader/live/kernel/kernel_loader/ARK4.BIN dist/ARK_A3000/ARK4.BIN # ARK-4 loader
+	$(Q)cp loader/live/kernel/psxloader/ARKX.BIN dist/ARK_A3000/ARKX.BIN # ARK-X loader
 	$(Q)cp loader/live/kernel/psxloader/ps1cfw_enabler/ps1cfw_enabler.suprx dist/PSVita/PS1CFW/
 	$(Q)cp extras/modules/ef2mapper/ef2uma.suprx dist/PSVita/
 	$(Q)cp extras/modules/ef2mapper/ef2xmc.suprx dist/PSVita/
-	$(Q)cp loader/live/kernel/kxploit/sceUID/K.BIN dist/ARK_01234/K.BIN # Kernel exploit for PSP 6.6X and Vita 3.60+
+	$(Q)cp loader/live/kernel/kxploit/sceUID/K.BIN dist/ARK_A3000/K.BIN # Kernel exploit for PSP 6.6X and Vita 3.60+
 	$(Q)cp loader/live/kernel/kxploit/sceSdGetLastIndex/K.BIN dist/ARK_Loader/K.BIN # Alternative Kernel exploit for PSP 6.6X
 	$(Q)cp loader/live/FinalSpeed/EBOOT.PBP dist/PSP/FinalSpeed/
 	$(Q)cp extras/modules/kpspident/kpspident.prx dist/PSP/ARK_cIPL/kpspident.prx
 	$(Q)cp extras/modules/ipl_update/ipl_update.prx dist/PSP/ARK_cIPL/ipl_update.prx
 	$(Q)cp extras/modules/kbooti_update/kbooti_update.prx dist/PSP/ARK_cIPL/kbooti_update.prx
-	$(Q)cp extras/modules/xmbctrl/xmbctrl.prx dist/ARK_01234/XMBCTRL.PRX # XMB Control Module
-	$(Q)cp extras/modules/idsregeneration/idsregeneration.prx dist/ARK_01234/IDSREG.PRX # idsregeneration
-	$(Q)cp extras/modules/usbdevice/usbdevice.prx dist/ARK_01234/USBDEV.PRX # USB Device Driver
-	$(Q)cp extras/modules/peops/peops.prx dist/ARK_01234/PS1SPU.PRX
-	$(Q)cp extras/modules/bsod/kernel/bsod.prx dist/ARK_01234/BSOD.PRX # Blue Screen of Death debugger
-	$(Q)cp extras/modules/pspftp/pspftp.prx dist/ARK_01234/PSPFTP.PRX
-	$(Q)cp extras/modules/pspav/pspav.prx dist/ARK_01234/PSPAV.PRX
-	$(Q)cp extras/modules/libpng/libpng.prx dist/ARK_01234/LIBPNG.PRX
-	$(Q)cp extras/modules/intraFont/intraFont.prx dist/ARK_01234/INTRAFON.PRX
-	$(Q)cp extras/modules/unarchive/unarchive.prx dist/ARK_01234/UNARCH.PRX
-	$(Q)cp extras/menus/recovery/ark_recovery.prx dist/ARK_01234/RECOVERY.PRX # Default recovery menu
-	$(Q)cp extras/menus/arkMenu/EBOOT.PBP dist/ARK_01234/VBOOT.PBP # Default launcher
-	$(Q)cp extras/menus/arkMenu/LANG.ARK dist/ARK_01234/LANG.ARK # Translations
-	$(Q)cp extras/menus/xMenu/EBOOT.PBP dist/ARK_01234/XBOOT.PBP # PS1 launcher
-	$(Q)cp extras/menus/arkMenu/themes/ARK_Revamped/THEME.ARK dist/ARK_01234/THEME.ARK # Launcher resources
-	$(Q)cp extras/menus/vshmenu/satelite.prx dist/ARK_01234/VSHMENU.PRX # New Default & Advanced VSH Menu
+	$(Q)cp extras/modules/xmbctrl/xmbctrl.prx dist/ARK_A3000/XMBCTRL.PRX # XMB Control Module
+	$(Q)cp extras/modules/idsregeneration/idsregeneration.prx dist/ARK_A3000/IDSREG.PRX # idsregeneration
+	$(Q)cp extras/modules/usbdevice/usbdevice.prx dist/ARK_A3000/USBDEV.PRX # USB Device Driver
+	$(Q)cp extras/modules/peops/peops.prx dist/ARK_A3000/PS1SPU.PRX
+	$(Q)cp extras/modules/bsod/kernel/bsod.prx dist/ARK_A3000/BSOD.PRX # Blue Screen of Death debugger
+	$(Q)cp extras/modules/pspftp/pspftp.prx dist/ARK_A3000/PSPFTP.PRX
+	$(Q)cp extras/modules/pspav/pspav.prx dist/ARK_A3000/PSPAV.PRX
+	$(Q)cp extras/modules/libpng/libpng.prx dist/ARK_A3000/LIBPNG.PRX
+	$(Q)cp extras/modules/intraFont/intraFont.prx dist/ARK_A3000/INTRAFON.PRX
+	$(Q)cp extras/modules/unarchive/unarchive.prx dist/ARK_A3000/UNARCH.PRX
+	$(Q)cp extras/menus/recovery/ark_recovery.prx dist/ARK_A3000/RECOVERY.PRX # Default recovery menu
+	$(Q)cp extras/menus/arkMenu/EBOOT.PBP dist/ARK_A3000/VBOOT.PBP # Default launcher
+	$(Q)cp extras/menus/arkMenu/LANG.ARK dist/ARK_A3000/LANG.ARK # Translations
+	$(Q)cp extras/menus/xMenu/EBOOT.PBP dist/ARK_A3000/XBOOT.PBP # PS1 launcher
+	$(Q)cp extras/menus/arkMenu/themes/ARK_Revamped/THEME.ARK dist/ARK_A3000/THEME.ARK # Launcher resources
+	$(Q)cp extras/menus/vshmenu/satelite.prx dist/ARK_A3000/VSHMENU.PRX # New Default & Advanced VSH Menu
 	$(Q)cp extras/apps/installer/EBOOT.PBP dist/PSP/ARK_Full_Installer # Full installer
 	$(Q)cp contrib/PSP/fatms371mod/*.prx dist/PSP/ARK_Full_Installer/kd/ # Full installer
 	$(Q)cp extras/modules/deadef/pspbtcnf_05g_deaf.bin dist/PSP/ARK_Full_Installer/kd/pstbtcnf_05g.bin # deadef for Full installer
@@ -135,20 +135,20 @@ copy-bin:
 	$(Q)cp extras/150kernel/installer/EBOOT.PBP dist/PSP/ARK_150Addon # ARK-4 150 Kernel Addon
 	$(Q)cp contrib/PSP/GAME/ARK_DC/libpsardumper.prx dist/PSP/ARK_150Addon
 	$(Q)cp contrib/PSP/GAME/ARK_DC/pspdecrypt.prx dist/PSP/ARK_150Addon
-	$(Q)cp contrib/UPDATER.TXT dist/ARK_01234/
-	$(Q)cp contrib/SETTINGS.TXT dist/ARK_01234/
-	$(Q)cp contrib/PSP/mediasync.prx dist/ARK_01234/MEDIASYN.PRX
-	$(Q)cp contrib/PSP/popsman.prx dist/ARK_01234/POPSMAN.PRX
-	$(Q)cp contrib/PSP/pops_01g.prx dist/ARK_01234/POPS.PRX
+	$(Q)cp contrib/UPDATER.TXT dist/ARK_A3000/
+	$(Q)cp contrib/SETTINGS.TXT dist/ARK_A3000/
+	$(Q)cp contrib/PSP/mediasync.prx dist/ARK_A3000/MEDIASYN.PRX
+	$(Q)cp contrib/PSP/popsman.prx dist/ARK_A3000/POPSMAN.PRX
+	$(Q)cp contrib/PSP/pops_01g.prx dist/ARK_A3000/POPS.PRX
 	$(Q)cp -r extras/menus/arkMenu/themes dist/
 	$(Q)rm -rf dist/themes/translations
 	$(Q)cp contrib/README.TXT dist/
-	$(Q)mv dist/FLASH0.ARK dist/ARK_01234/ # flash0 package
-	$(Q)cp -r dist/ARK_01234 dist/PSP/ARK_DC/
-	$(Q)cp -r dist/ARK_01234 dist/PC/MagicMemoryCreator/TM/DCARK/
+	$(Q)mv dist/FLASH0.ARK dist/ARK_A3000/ # flash0 package
+	$(Q)cp -r dist/ARK_A3000 dist/PSP/ARK_DC/
+	$(Q)cp -r dist/ARK_A3000 dist/PC/MagicMemoryCreator/TM/DCARK/
 	$(Q)find dist/themes/ -type d -name 'resources' -exec rm -rf {} \; 2>/dev/null || true
-	$(q)mkdir -p loader/vpk/bin/save/ARK_01234
-	$(Q)cp -r dist/ARK_01234 loader/vpk/bin/save/
+	$(q)mkdir -p loader/vpk/bin/save/ARK_A3000
+	$(Q)cp -r dist/ARK_A3000 loader/vpk/bin/save/
 	$(Q)cp loader/live/kernel/psxloader/ps1cfw_enabler/ps1cfw_enabler.suprx loader/vpk/bin/psx/
 	$(Q)cd loader/vpk/bin/ && zip -r ../../../dist/PSVita/FasterARK.vpk * && cd $(ARKROOT)
 	$(Q)$(MAKE) -C extras/apps/updater/
@@ -386,11 +386,11 @@ clean:
 	$(Q)$(MAKE) $@ K=sceSdGetLastIndex -C loader/live/kernel/kxploit
 	$(Q)$(PYTHON) contrib/PC/scripts/cleandeps.py
 	$(Q)find -name 'THEME.ARK' -exec rm {} \;
-	$(Q)rm -f extras/apps/updater/ARK_01234.PKG | true
+	$(Q)rm -f extras/apps/updater/ARK_A3000.PKG | true
 	$(Q)rm -f extras/apps/updater/EBOOT_PSP.PBP | true
 	$(Q)rm -f extras/apps/updater/EBOOT_GO.PBP | true
 	$(Q)rm -f extras/menus/arkMenu/LANG.ARK
-	$(Q)rm -rf loader/vpk/bin/save/ARK_01234
+	$(Q)rm -rf loader/vpk/bin/save/ARK_A3000
 	$(Q)rm -f loader/vpk/bin/psx/ps1cfw_enabler.suprx
 	$(Q)rm -f loader/dc/tmctrl/tmctrl.h
 	$(Q)rm -f loader/dc/btcnf/*.bin
