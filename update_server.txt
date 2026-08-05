@@ -1,0 +1,4 @@
+A3.0.0
+https://github.com
+Changes:
+- Adapted the autoupdater.
