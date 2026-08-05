@@ -30,10 +30,10 @@
 ARKConfig _arkconf = {
     .magic = ARK_CONFIG_MAGIC,
 #ifndef MS_IPL
-    .arkpath = "ms0:/PSP/SAVEDATA/ARK_A3000/", // default path for ARK files
+    .arkpath = "ms0:/PSP/SAVEDATA/ARK_30000/", // default path for ARK files
     .exploit_id = CIPL_EXPLOIT_ID,
 #else
-    .arkpath = ARK_DC_PATH "/ARK_A3000/", // default path for ARK files
+    .arkpath = ARK_DC_PATH "/ARK_30000/", // default path for ARK files
     .exploit_id = DC_EXPLOIT_ID,
 #endif
     .launcher = {0},

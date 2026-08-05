@@ -59,9 +59,9 @@ if [ -f "ArkFast_new.vpk" ]; then
     rm -f ArkFast_new.vpk
 fi
 cd ARK4_tmp/
-mv -f Vita/Standalone/K.BIN ARK_A3000/K.BIN
-zip -r ARK_A3000.zip ARK_A3000
-mv -f ARK_A3000.zip ../ArkFast_tmp/resources/ARK_A3000.zip
+mv -f Vita/Standalone/K.BIN ARK_30000/K.BIN
+zip -r ARK_30000.zip ARK_30000
+mv -f ARK_30000.zip ../ArkFast_tmp/resources/ARK_30000.zip
 cd ..
 rm -rf ARK4_tmp/
 cd ArkFast_tmp/

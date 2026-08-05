@@ -108,16 +108,16 @@ static int launchRecoveryApp(char* p){
 static void checkArkPath(){
     int fd;
 
-    fd = sceIoDopen("ef0:/PSP/SAVEDATA/ARK_A3000");
+    fd = sceIoDopen("ef0:/PSP/SAVEDATA/ARK_30000");
     if (fd >= 0){
-        strcpy(ark_config->arkpath, "ef0:/PSP/SAVEDATA/ARK_A3000/");
+        strcpy(ark_config->arkpath, "ef0:/PSP/SAVEDATA/ARK_30000/");
         sceIoDclose(fd);
         return;
     }
 
-    fd = sceIoDopen("ms0:/PSP/SAVEDATA/ARK_A3000");
+    fd = sceIoDopen("ms0:/PSP/SAVEDATA/ARK_30000");
     if (fd >= 0){
-        strcpy(ark_config->arkpath, "ms0:/PSP/SAVEDATA/ARK_A3000/");
+        strcpy(ark_config->arkpath, "ms0:/PSP/SAVEDATA/ARK_30000/");
         sceIoDclose(fd);
         return;
     }

@@ -56,7 +56,7 @@ as well as unique and exclusive new features not found anywhere else.
 
 ##### Installation from Official Firmware
 - If no custom firmware is installed (PSP is original).
-- Copy `ARK_A3000` folder into `/PSP/SAVEDATA/` folder.
+- Copy `ARK_30000` folder into `/PSP/SAVEDATA/` folder.
 - Copy `ARK_Loader` folder into `/PSP/GAME/` folder.
 - Launch `ARK Loader`. It will install ARK modules on PSP Flash and boot the CFW.
 - At this point `ARK` will work as a `Live CFW`, meaning that `ARK Loader` will need to be run every time the console is turned off or rebooted.
@@ -125,7 +125,7 @@ There are two types of installation on PS Vita. You can use either one or both.
 ##### Adrenaline (Patched PSPEmu)
 
 - Works on Firmware 3.60 up to 3.74, requires Henkaku/h-encore and <a href="https://github.com/isage/Adrenaline">Adrenaline</a> (Isage's fork is recommended, but original will work too).
-- Install `ARK_A3000` folder into `pspemu/PSP/SAVEDATA/` folder if it isn't already there.
+- Install `ARK_30000` folder into `pspemu/PSP/SAVEDATA/` folder if it isn't already there.
 - Install `ARK_Loader` folder into `pspemu/PSP/GAME/` folder.
 - To make ARK-4 automatically load with Adrenaline there are two options.
 - (Option 1, new method) Rename `ARK_Loader` to `BOOT`. Go to Adrenaline's Recovery Menu and in the Configuration page enable the `Autorun program` option. This only works on newer Adrenaline versions as the feature isn't implemented in older versions.
@@ -139,7 +139,7 @@ There are two types of installation on PS Vita. You can use either one or both.
 
 - Option 1: Use the `System Update` ( `ARK-4 Updater` ) feature in the XMB. Requires your PSP/Vita to be connected to the internet.
 - Option 2: Copy the `UPDATE` folder to `/PSP/GAME/` and run it.
-- Option 3: Copy `ARK_A3000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
+- Option 3: Copy `ARK_30000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
 
 #### Changelog
 

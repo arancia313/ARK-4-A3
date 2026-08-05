@@ -5,7 +5,7 @@
 #define ARK_ENTRY 0x00010000 // don't touch this!
 #define ARK_SIZE 0x4000 // by default, we read until EOF or end of scratchpad (16kB)
 #define ARK_BIN "ARK.BIN" // ARK payload
-#define ARK_PATH "ms0:/PSP/SAVEDATA/ARK_A3000/" // you don't really need to change this
+#define ARK_PATH "ms0:/PSP/SAVEDATA/ARK_30000/" // you don't really need to change this
 
 // Entry Point
 int exploitEntry() __attribute__((section(".text.startup")));
