@@ -402,6 +402,8 @@ void Browser::installPlugin(){
         {6, "Launcher"},
         {7, "<Game ID>"},
         {8, "<LoadStart Module>"},
+        {9, "Smartbuilder Legacy (Scratch 1.4)"},
+        {10, "Smartbuilder 3 (Scratch 3)"}
     };
 
     optionsmenu = new OptionsMenu("Install Plugin", sizeof(options_entries)/sizeof(t_options_entry), options_entries);
@@ -418,6 +420,12 @@ void Browser::installPlugin(){
         char* modes[] = {"always", "game", "ps1", "xmb", "psp", "homebrew", "launcher"};
         mode = modes[ret];
     }
+    else if (ret == 9){
+        mode = "sb"; //  Scratch 1.4 Smartbuilder Legacy
+    }
+    else if (ret == 10){
+        mode = "sb3"; // Scratch 3 Smartbuilder
+    }
     else if (ret == 7){
         SystemMgr::pauseDraw();
         OSK osk;
@@ -425,11 +433,13 @@ void Browser::installPlugin(){
         osk.loop();
         int osk_res = osk.getResult();
         if(osk_res != OSK_CANCEL)
-        {
-            char tmpText[51];
-            osk.getText((char*)tmpText);
-            mode = tmpText;
-        }
+{
+    char tmpText[51];
+    memset(tmpText, 0, sizeof(tmpText)); ////////////////////////////////////////////////////////
+    osk.getText(tmpText);               //  no wonder my tooth ache passed because of this.  ///
+    mode = string(tmpText);            ////////////////////////////////////////////////////////  
+}
+
         osk.end();
         SystemMgr::resumeDraw();
         if (osk_res == OSK_CANCEL) return;
