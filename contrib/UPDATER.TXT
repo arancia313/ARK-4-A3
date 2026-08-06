@@ -1,1 +1,1 @@
-https://raw.githubusercontent.com/arancia313/ARK-4-A3/refs/heads/main/pspupdatelist.txt
+https://raw.githubusercontent.com/arancia313/ARK-4-A3/refs/heads/main/psp-updatelist.txt
