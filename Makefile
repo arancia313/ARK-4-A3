@@ -151,7 +151,8 @@ copy-bin:
 	$(Q)cp -r dist/ARK_30000 loader/vpk/bin/save/
 	$(Q)cp loader/live/kernel/psxloader/ps1cfw_enabler/ps1cfw_enabler.suprx loader/vpk/bin/psx/
 	$(Q)cd loader/vpk/bin/ && zip -r ../../../dist/PSVita/FasterARK.vpk * && cd $(ARKROOT)
-	$(Q)$(MAKE) -C extras/apps/updater/
+	$(Q)$(MAKE) -C extras/apps/updater/ EBOOT.PBP
+	$(Q)mv extras/apps/updater/EBOOT.PBP extras/apps/updater/EBOOT_PSP.PBP
 	$(Q)cp extras/apps/updater/EBOOT_PSP.PBP dist/UPDATE/EBOOT.PBP
 	$(Q)cp loader/dc/msipl/newipl/msipl_*.bin dist/PC/MagicMemoryCreator/TM/DCARK/
 	$(Q)cp loader/dc/btcnf/pspbtcnf*_dc.bin dist/PC/MagicMemoryCreator/TM/DCARK/kd/
