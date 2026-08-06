@@ -67,6 +67,7 @@ SUBDIRS = libs \
 	extras/menus/vshmenu \
 	extras/apps/installer \
 	extras/apps/uninstaller \
+	extras/apps/sb_fowarder \
 	extras/150kernel/msipl/stage1 \
 	extras/150kernel/msipl/mainbinex \
 	extras/150kernel/rebootex150 \

@@ -166,7 +166,7 @@ void classicipl_menu(){
     size = pspIplUpdateGetIpl(big_buf);
 
     if(size < 0) {
-        ErrorExit(5000,"Failed to get IPL!\n");
+        ErrorExit(5000,"Failed to get the IPL!\n");
     }
 
     printf("\nCustom IPL Flasher for 6.6x.\n\n\n");
@@ -389,11 +389,11 @@ void newipl_menu(const char* config){
 
     printf(" Press X to install cIPL\n");
 
-    printf(" Press O to restore Original IPL.\n");
+    printf(" Press O to go back to Original Sony IPL.\n");
 
     if(!config && model < 2 && !is_ta88v3()) {
 	    allow_classic_install = 1;
-	    printf(" Press L to intall Classic IPL.\n");
+	    printf(" Press L to install Classic IPL.\n");
     }
 
     printf(" Press R to cancel\n\n");

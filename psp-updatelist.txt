@@ -1,4 +1,4 @@
-A3.0.1
+A3.0.2
 https://github.com
 Changes:
-- Adapted and implemented the autoupdater. You can now literally update your CFW by connecting to the internet.
+- Ate the soul of the updater. 

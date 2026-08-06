@@ -139,7 +139,7 @@ static int selected_choice(u32 choice) {
 
     case 0:
         pspDebugScreenSetXY(25, 30);
-        printf("Good-bye ;-)");
+        printf("Goodbye! :)");
         sceKernelDelayThread(100000);
         return 0;
     case 1:
@@ -175,7 +175,7 @@ static int selected_choice(u32 choice) {
             char* p = findRecoveryApp();
             pspDebugScreenSetXY(20, 30);
             if (p) printf("Booting %s", p);
-            else printf("Not found :(");
+            else printf("Not found DX");
             sceKernelDelayThread(2000000);
             if (p){
                 launchRecoveryApp(p);
@@ -193,7 +193,7 @@ static void draw(char** options, int size, int dir){
     printf("********************************************************************");
 
     pspDebugScreenSetXY(0, 2);
-    printf("* ARK-4 Recovery Menu *                                            *");
+    printf("* ARK-4 A3 Recovery Menu *                                            *");
     pspDebugScreenSetXY(0, 3);
     printf("***********************                                            *");
     pspDebugScreenSetXY(0, 4);
