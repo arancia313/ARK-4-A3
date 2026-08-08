@@ -463,11 +463,11 @@ int main()
     if(devkit != 0x06060010 && devkit != 0x06060110) {
 	int check_dcark = sceIoDopen("ms0:/TM/DCARK");
 	if(check_dcark<0) {
-        	ErrorExit(5000,"DCARK MISSING, INSTALL IT FIRST!\n");
+        	ErrorExit(5000,"DCARK IS MISSING, INSTALL IT FIRST!\n");
 	}
 	else {
 		sceIoDclose(check_dcark);
-		pspDebugScreenPrintf("After install your PSP will be 'bricked', turn on holding LT ( Left Trigger ) to boot DCARK\n");
+		pspDebugScreenPrintf("This is just a test: After install, your PSP wil be 'bricked', but perfectly stable. There is no reason to panic, though. Turn the PSP on by holding L to boot up DCARK.\n");
 		sceKernelDelayThread(4*1000*1000);
 		pspDebugScreenClear();
 	}
@@ -477,7 +477,7 @@ int main()
     SceModule2 infinity_mod;
     SceIoStat dc_stat;
     if (kuKernelFindModuleByName("InfinityControl", &infinity_mod) == 0 && sceIoGetstat("ms0:/TM/DCARK/msipl.raw", &dc_stat)<0){
-        ErrorExit(5000, "ERROR: installing cIPL over Infinity is risky, make sure you install DC-ARK first before doing this!");
+        ErrorExit(5000, "ERROR: installing cIPL over Infinity is very risky, make sure you install DC-ARK first before doing this to recover your PSP if it's bricked!");
     }
 
     kpspident = pspSdkLoadStartModule("kpspident.prx", PSP_MEMORY_PARTITION_KERNEL);
@@ -496,7 +496,7 @@ int main()
     }
 
     if (sceSysconGetBaryonVersion(&baryon_ver) < 0) {
-        ErrorExit(5000, "Could not determine baryon version!\n");
+        ErrorExit(5000, "Could not determine your baryon version!\n");
     }
 
     // check if running ARK

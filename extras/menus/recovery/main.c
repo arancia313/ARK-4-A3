@@ -195,7 +195,7 @@ static void draw(char** options, int size, int dir){
     pspDebugScreenSetXY(0, 2);
     printf("* ARK-4 A3 Recovery Menu *                                            *");
     pspDebugScreenSetXY(0, 3);
-    printf("***********************                                            *");
+    printf("**************************                                            *");
     pspDebugScreenSetXY(0, 4);
     printf("*                                                                  *");
 

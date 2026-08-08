@@ -26,10 +26,10 @@ extern "C" {
 
 // ARK Version
 #define ARK_MAJOR_VERSION 4
-#define ARK_MINOR_VERSION 20
-#define ARK_MICRO_VERSION 69
+#define ARK_MINOR_VERSION 0
+#define ARK_MICRO_VERSION 2
 #define ARK_REVISION      206
-
+#define ARK_A3_VERSION    "A3"
 // Pointers and sizes
 #define ARK_PATH_SIZE 128
 #define ARK_CONFIG 0x08800010 // ARK Runtime configuration backup address
@@ -109,7 +109,7 @@ extern "C" {
 #define TM_PATH_W L"\\TM\\DCARK\\"
 
 // Get it? Those are different firmware versions.
-#define FW_661 0x06060110 // System Software 6.61 (It's a requirement for using ARK-4 A3).
+#define FW_661 0x06060110 // System Software 6.61 (for getting the absolute maximum of ARK-4 A3!).
 #define FW_660 0x06060010 // System Software 6.60.
 #define FW_150 0x01050001 // System Software 1.50.
 

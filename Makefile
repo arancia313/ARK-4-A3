@@ -124,6 +124,7 @@ copy-bin:
 	$(Q)cp extras/menus/arkMenu/themes/ARK_Revamped/THEME.ARK dist/ARK_30000/THEME.ARK # Launcher resources
 	$(Q)cp extras/menus/vshmenu/satelite.prx dist/ARK_30000/VSHMENU.PRX # New Default & Advanced VSH Menu
 	$(Q)cp extras/apps/installer/EBOOT.PBP dist/PSP/ARK_Full_Installer # Full installer
+	$(Q)cp extras/apps/sb_fowarder dist/PSP/ARK_Smartbuilder_Fowarder
 	$(Q)cp contrib/PSP/fatms371mod/*.prx dist/PSP/ARK_Full_Installer/kd/ # Full installer
 	$(Q)cp extras/modules/deadef/pspbtcnf_05g_deaf.bin dist/PSP/ARK_Full_Installer/kd/pstbtcnf_05g.bin # deadef for Full installer
 	$(Q)cp extras/modules/deadef/deadef.prx dist/PSP/ARK_Full_Installer/kd/ # deadef for Full installer
