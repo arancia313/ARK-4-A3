@@ -85,6 +85,9 @@ all: subdirs cipl msipl kxploits finalspeed mkdir-dist encrypt-prx copy-dcark pa
 
 #	Common installation
 copy-bin:
+	$(Q)mkdir -p dist/ARK_30000
+	$(Q)cp -r extras/apps/updater/resources/ICON0.PNG dist/ARK_30000/ICON0.PNG
+	$(Q)cp -r extras/apps/updater/PARAM_PSP.SFO dist/ARK_30000/PARAM.SFO
 	$(Q)cp -r contrib/PSP/SAVEDATA/ARK_30000/ dist/ # ARK Savedata installation
 	$(Q)cp -r contrib/PSP/GAME/ARK_DC/ dist/PSP/ # ARK DC installer
 	$(Q)cp loader/dc/installer/EBOOT.PBP dist/PSP/ARK_DC/ # ARK DC installer
@@ -124,7 +127,7 @@ copy-bin:
 	$(Q)cp extras/menus/arkMenu/themes/ARK_Revamped/THEME.ARK dist/ARK_30000/THEME.ARK # Launcher resources
 	$(Q)cp extras/menus/vshmenu/satelite.prx dist/ARK_30000/VSHMENU.PRX # New Default & Advanced VSH Menu
 	$(Q)cp extras/apps/installer/EBOOT.PBP dist/PSP/ARK_Full_Installer # Full installer
-	$(Q)cp extras/apps/sb_fowarder dist/PSP/ARK_Smartbuilder_Fowarder
+	$(Q)cp  -r extras/apps/sb_fowarder dist/PSP/ARK_Smartbuilder_Fowarder
 	$(Q)cp contrib/PSP/fatms371mod/*.prx dist/PSP/ARK_Full_Installer/kd/ # Full installer
 	$(Q)cp extras/modules/deadef/pspbtcnf_05g_deaf.bin dist/PSP/ARK_Full_Installer/kd/pstbtcnf_05g.bin # deadef for Full installer
 	$(Q)cp extras/modules/deadef/deadef.prx dist/PSP/ARK_Full_Installer/kd/ # deadef for Full installer
