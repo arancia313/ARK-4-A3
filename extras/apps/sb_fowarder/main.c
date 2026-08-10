@@ -50,7 +50,7 @@ int main(int argc, char* argv[]) {
             while (sceIoDread(dfd, &dir) > 0) {
                 char *name = dir.d_name;
                 int len = strlen(name);
-                if ((len > 4 && strcmp(&name[len - 4], ".sb3") == 0) || 
+                if ((len > 4 && strcmp(&name[len - 4], ".sb3") == 0) ||
                     (len > 3 && strcmp(&name[len - 3], ".sb") == 0)) {
                     snprintf(target_scratch_file, sizeof(target_scratch_file), "%s/%s", sandbox_root, name);
                     file_found = 1;
