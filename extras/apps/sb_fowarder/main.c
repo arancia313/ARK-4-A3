@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <intraFont.h>
-
+#include <pspctrl.h>
 PSP_MODULE_INFO("sb_forwarder", 0, 1, 1);
 PSP_MAIN_THREAD_ATTR(PSP_THREAD_ATTR_USER);
 
@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
     // Inizializza video e font
     initGraphics();
     intraFontInit();
-    intraFont* font = intraFontLoad("flash0:/font/ltn0.pgf", INTRAFONT_CACHE_MED);
+    IntraFont* font = IntraFontLoadFile("flash0:/font/Itn0.pgf", 0);
 
     // Leggi la modalità
     FILE *f = fopen("ms0:/PSP/SAVEDATA/ARK_30000/CELNUM.TXT", "r");
@@ -77,7 +77,7 @@ int main(int argc, char* argv[]) {
             sceGuClear(GU_COLOR_BUFFER_BIT);
             
             if (font != NULL) {
-                intraFontSetStyle(font, 1.0f, INTRAFONT_COLOR_WHITE, INTRAFONT_COLOR_BLACK, INTRAFONT_ALIGN_LEFT);
+                intraFontSetStyle(font, 1.0f, 0xFFFFFFFF, 0x00000000, 0);
                 intraFontPrint(font, 20, 136, "Loading is limited to .sb files by default setting.");
                 intraFontPrint(font, 20, 156, "You need to edit the celnum.txt file to 1!");
             }
