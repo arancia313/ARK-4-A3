@@ -36,28 +36,32 @@ void Menu::readEbootList(string path){
         
     while ((dit = readdir(dir))){
 
-       /////////////////////////////////////////////////////////////////////////////////////////////////
-      // IMPLEMENTATION REQUIRED FOR SMARTBUILDER SUPPORT!!! //////////////////////////////////////////
-     /////////////////////////////////////////////////////////////////////////////////////////////////
-        std::string filename = dit->d_name;                                                  ////////
-        size_t len = filename.length();                                                     ////////
-                                                                                           ////////
-        // Verifies if the file is a .sb3 or  legacy .sb.                                 ////////
-                                                                                         ////////
-        if ((len >= 4 && filename.substr(len - 4) == ".sb3") ||                         ////////
-           (len >= 3 && filename.substr(len - 3) == ".sb")) {                          ////////
-                                                                                      ////////
-                Entry* e = Entry::createIfPops(path + filename);                     ////////
-                if (e) {                                                            ////////
-                    e->setName("A3 Configuration (" + filename +")");              ////////
-                    eboots.push_back(e);                                          ////////
-                }                                                                ////////
-                continue;                                                       ////////
-           }                                                                   ////////
-                                                                              ////////
-       //////////////////////////////////////////////////////////////////////////////
-      // The rest of the code is right down below. v ///////////////////////////////
-     //////////////////////////////////////////////////////////////////////////////
+        // Arancia 3 implementation.
+       ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // IMPLEMENTATION REQUIRED FOR SMARTBUILDER SUPPORT!!! DON'T TOUCH THIS IF YOU DON'T KNOW WHAT THIS THING IS! //////////
+     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        string filename = dit->d_name;                                                                               ///////
+        size_t len = filename.length();                                                                             ///////
+                                                                                                                   ///////
+        // Verifies if the file is a .sb3 or  legacy .sb.                                                         ///////
+                                                                                                                 ///////
+        if ((len >= 4 && filename.substr(len - 4) == ".sb3") ||                                                 ///////
+           (len >= 3 && filename.substr(len - 3) == ".sb")) {                                                  ///////
+                                                                                                              ///////
+                Entry* e = Entry::createIfPops(path + filename);                                             ///////
+                if (e) {                                                                                    ///////
+                   /////////////////////////////////////////////////////////////////////                   ///////
+                  // "It has become over-scoped". Did you mean "over-bloated"? Stop. //                   ///////
+                 /////////////////////////////////////////////////////////////////////                   ///////
+                    eboots.push_back(e);                                                                ///////
+                }                                                                                      ///////
+                continue;                                                                             ///////
+           }                                                                                         ///////
+                                                                                                    ///////
+       ///////////////////////////////////////////////////////////////////////////////////////////////////
+      // The rest of the code is right down below. v ////////////////////////////////////////////////////
+     ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // Arancia 3 Implementation.
 
         string fullpath = fullPath(path, dit->d_name);
         if (strcmp(dit->d_name, ".") == 0) continue;
