@@ -36,6 +36,29 @@ void Menu::readEbootList(string path){
         
     while ((dit = readdir(dir))){
 
+       /////////////////////////////////////////////////////////////////////////////////////////////////
+      // IMPLEMENTATION REQUIRED FOR SMARTBUILDER SUPPORT!!! //////////////////////////////////////////
+     /////////////////////////////////////////////////////////////////////////////////////////////////
+        std::string filename = dit->d_name;                                                  ////////
+        size_t len = filename.length();                                                     ////////
+                                                                                           ////////
+        // Verifies if the file is a .sb3 or  legacy .sb.                                 ////////
+                                                                                         ////////
+        if ((len >= 4 && filename.substr(len - 4) == ".sb3") ||                         ////////
+           (len >= 3 && filename.substr(len - 3) == ".sb")) {                          ////////
+                                                                                      ////////
+                Entry* e = Entry::createIfPops(path + filename);                     ////////
+                if (e) {                                                            ////////
+                    e->setName("A3 Configuration (" + filename +")");              ////////
+                    eboots.push_back(e);                                          ////////
+                }                                                                ////////
+                continue;                                                       ////////
+           }                                                                   ////////
+                                                                              ////////
+       //////////////////////////////////////////////////////////////////////////////
+      // The rest of the code is right down below. v ///////////////////////////////
+     //////////////////////////////////////////////////////////////////////////////
+
         string fullpath = fullPath(path, dit->d_name);
         if (strcmp(dit->d_name, ".") == 0) continue;
         if (strcmp(dit->d_name, "..") == 0) continue;
@@ -128,7 +151,7 @@ void Menu::draw(){
         }
     }
     else {
-        common::printText(20, 2, "No Games Found :-(");
+        common::printText(20, 2, "Nothing was Found! DX");
     }
 
     // draw help text
