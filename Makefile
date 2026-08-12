@@ -89,6 +89,7 @@ copy-bin:
 	$(Q)cp -r extras/apps/updater/PARAM_PSP.SFO dist/ARK_30000/PARAM.SFO
 	$(Q)cp -r contrib/PSP/SAVEDATA/ARK_30000/ dist/ # ARK Savedata installation
 	$(Q)cp -r contrib/PSP/GAME/ARK_DC/ dist/PSP/ # ARK DC installer
+	$(Q)cp -r contrib/PSP/SAVEDATA/ARK_30000/exh.txt dist/ARK_30000/exh.txt
 	$(Q)cp loader/dc/installer/EBOOT.PBP dist/PSP/ARK_DC/ # ARK DC installer
 	$(Q)cp loader/vpk/bin/psp/EBOOT.PBP dist/PSVita/PSPCFW/NPUZ01234/
 	$(Q)cp loader/vpk/bin/psp/PBOOT.PBP dist/PSVita/PSPCFW/NPUZ01234/
