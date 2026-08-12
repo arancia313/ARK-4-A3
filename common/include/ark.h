@@ -97,8 +97,8 @@ extern "C" {
 #define ARK_BIN "ARK.BIN" // ARK-2 payload
 #define ARK4_BIN "ARK4.BIN" // ARK-4 payload
 #define ARKX_BIN "ARKX.BIN" // ARK-X payload
-#define LIVE_EXPLOIT_ID "Live" // default loader name
-#define CIPL_EXPLOIT_ID "cIPL" // loader name for Custom IPL
+#define LIVE_EXPLOIT_ID "exh A3" // default loader name
+#define CIPL_EXPLOIT_ID "cIPL A3" // loader name for Custom IPL. Remember, cIPL is not a custom firmware itself, it's an exploit for making the CFW permanent.
 #define DC_EXPLOIT_ID "DC" // loader name for Despertar del Cementerio
 #define DEFAULT_ARK_FOLDER "ARK_30000"
 #define SAVEDATA_MS0 "ms0:/PSP/SAVEDATA/" //the directory where "ARK_30000" is located.
