@@ -141,6 +141,22 @@ There are two types of installation on PS Vita. You can use either one or both.
 - Option 2: Copy the `UPDATE` folder to `/PSP/GAME/` and run it.
 - Option 3: Copy `ARK_30000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
 
+##### How to update via OTA(Very simple):
+For updating your psp via OTA, you need your PSP to be connected to the internet.
+1. Go to Settings > System Update.
+2. Click "Update via Internet" and connect the PSP to your network with WPA2 (unmodded PSP's only support open networks,
+WEP and WPA, and only 2.4 Ghz).
+3. Let the PSP download the data, and then launch the updater. 
+
+##### How to update your PSP manually (requires the "UPDATE" folder):
+1. Put the "UPDATE" folder on PSP/GAME.
+2. Go to your Memory stick and run the updater.
+
+##### How to update your PSP via the ARK_30000(requires the ARK_30000 folder!):
+This is a little atrocious, because you will lose your configurations.
+1. Copy the ARK_30000 folder on PSP/SAVEDATA.
+2. to not lose your configurations, you need to overwrite all .bin and .prx files without touching the "SETTINGS.TXT" file.
+
 #### Changelog
 
 - `ARK-1`: original port/rewrite of `PRO CFW` for the `PS Vita`. Codenamed `PROVITA`. Source code can be found here: https://github.com/PSP-Archive/ARK-1-PROVita-
@@ -162,6 +178,6 @@ There are two types of installation on PS Vita. You can use either one or both.
 
 - ARK does not delete itself.
 
-- This may look like some version of Dark Alex's OE or some official release from the ark 4 team, but just know this is a fanmade, unofficial, maintained and forked version of ark 4.
+- This may look like some version of Dark Alex's OE (Maybe M33) or some official release from the ark 4 team, but just know this is a fanmade, unofficial, maintained and forked version of ark 4.
 Just know that official development from the ark 4 team has shifted to ark 5 entirely, but know that this is not official. This version is made to keep ark 4 alive.
 </p>
