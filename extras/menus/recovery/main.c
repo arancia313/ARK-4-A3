@@ -337,36 +337,79 @@ int main(SceSize args, void *argp) {
     sceKernelExitGame();
     return 0;
 }
+ void activate_exh(void) {
+    char def = '1';
+    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
+    if (f >= 0) {
+        sceIoWrite(f, &def, 1);
+        sceIoClose(f);
+    }
+ }
+
+  // Dunk the exh in the bin! Got it!
+
+ void reset_exh(void) {
+    char def = '0';
+    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
+    if (f >= 0) {
+        sceIoWrite(f, &def, 1);
+        sceIoClose(f);
+    }
+ }
+
  void exh_submenu(void) {
     int running = 1;
     int index = 0;
+    int redraw = 1;
     SceCtrlData pad;
 
     while (running) {
         /////////////////////////////////////////
        // Gotta wipe the screen this instant. //
       /////////////////////////////////////////
-      sceDisplayWaitVblankStart();
-      pspDebugScreenClear();
-      pspDebugScreenSetTextColor(0xFFFFFFFF);
-      pspDebugScreenSetXY(5, 5);
-      pspDebugScreenPrintf("    ///////////////////////");
-      pspDebugScreenSetXY(5, 6);
-      pspDebugScreenPrintf("  //// exh Manager //////");
-      pspDebugScreenSetXY(5, 7);
-      pspDebugScreenPrintf("///////////////////////");
+      if (redraw) {
+        sceDisplayWaitVblankStart();
+        pspDebugScreenClear();
+        pspDebugScreenSetTextColor(0xFFFFFFFF);
+        pspDebugScreenSetXY(5, 5);
+        pspDebugScreenPrintf("    ///////////////////////");
+        pspDebugScreenSetXY(5, 6);
+        pspDebugScreenPrintf("  //// exh Manager //////");
+        pspDebugScreenSetXY(5, 7);
+        pspDebugScreenPrintf("///////////////////////");
       
         // --- SELECTABLES ---
 
         pspDebugScreenSetXY(5, 10);
-        pspDebugScreenPrintf("%s Option 1", (index == 0) ? ">" : " " );
+        pspDebugScreenPrintf("%s Activate exh", (index == 0) ? ">" : " " );
         pspDebugScreenSetXY(5, 11);
-        pspDebugScreenPrintf("%s Option 2", (index == 1) ? ">" : " " );
-        
+        pspDebugScreenPrintf("%s Reset exh", (index == 1) ? ">" : " " );
+
+        redraw = 0;
+
+      }
         // --- Don't think about this... ---
         sceCtrlReadBufferPositive(&pad, 1);
-        if (pad.Buttons & PSP_CTRL_UP) index = 0;
-        if (pad.Buttons & PSP_CTRL_DOWN) index = 1;
+        // --- For reading the pad output. ---
+
+        // --- controls. ---
+        if (pad.Buttons & PSP_CTRL_UP) {
+            index = 0;
+            redraw = 1;
+        }
+        if (pad.Buttons & PSP_CTRL_DOWN) {
+            index = 1;
+            redraw = 1;
+        }
+         // --- Managing button selection ---
+
+         if (pad.Buttons & PSP_CTRL_CROSS) {
+            if (index == 0) {
+                activate_exh();
+            } else if (index == 1) {
+                reset_exh();
+            }
+         }
         if (pad.Buttons & PSP_CTRL_TRIANGLE) { 
             running = 0; 
         }
