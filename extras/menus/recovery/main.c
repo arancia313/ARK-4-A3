@@ -339,6 +339,7 @@ int main(SceSize args, void *argp) {
 }
  void exh_submenu(void) {
     int running = 1;
+    int index = 0;
     SceCtrlData pad;
 
     while (running) {
@@ -351,15 +352,24 @@ int main(SceSize args, void *argp) {
       pspDebugScreenSetXY(5, 5);
       pspDebugScreenPrintf("    ///////////////////////");
       pspDebugScreenSetXY(5, 6);
-      pspDebugScreenPrintf("  //// exh Manager //////")
+      pspDebugScreenPrintf("  //// exh Manager //////");
       pspDebugScreenSetXY(5, 7);
-      pspDebugScreenPrintf("///////////////////////")
-      pspDebugScreenSetXY(5, 10)
-      pspDebugScreenPrintf("\nPress Triangle to exit.");
-      sceCtrlPeekBufferPositive(&pad, 1);
-      if (pad.Buttons & PSP_CTRL_TRIANGLE) { 
-        running = 0; 
-    }
+      pspDebugScreenPrintf("///////////////////////");
+      
+        // --- SELECTABLES ---
+
+        pspDebugScreenSetXY(5, 10);
+        pspDebugScreenPrintf("%s Option 1", (index == 0) ? ">" : " " );
+        pspDebugScreenSetXY(5, 11);
+        pspDebugScreenPrintf("%s Option 2", (index == 1) ? ">" : " " );
+        
+        // --- Don't think about this... ---
+        sceCtrReadBufferPositive(&pad, 1);
+        if (pad.Buttons & PSP_CTRL_UP) index = 0;
+        if (pad.Buttons & PSP_CTRL_DOWN) index = 1;
+        if (pad.Buttons & PSP_CTRL_TRIANGLE) { 
+            running = 0; 
+        }
     sceKernelDelayThread(30000);
     }
  }
