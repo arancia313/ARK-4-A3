@@ -32,6 +32,8 @@ as well as unique and exclusive new features not found anywhere else.
 
 - Built-in game fixes using the anti-CFW engine `Stargate`.
 
+- Built-in .sb and .sb3 support (BETA!)
+
 - `New cIPL` compatible with all PSP models, for a true permanent CFW with enhanced brick protection.
 
 - Includes `Despertar del Cementerio Version 10`, allowing to unbrick any PSP.
@@ -39,6 +41,8 @@ as well as unique and exclusive new features not found anywhere else.
 - `Custom game launcher` useful when the XMB isn't available or lacks a certain feature.
  
 - `OTA` updates. Fully updateable via the internet.
+
+- Recovery menu. Useful for those who love setting up their plugins and settings directly at bootup (if you have cIPL).
 
 
 ![CFW Settings](.github/screenshots/cfw_settings.bmp "CFW Settings")
@@ -98,7 +102,6 @@ as well as unique and exclusive new features not found anywhere else.
 - Or use a `Pandora` or `Baryon Sweeper` in combination with your newly created `Magic Memory Stick` to boot up `Despertar del Cementerio`.
 - On compatible models, you can use `Advanced VSH Menu` to create a `Pandora Battery`.
 - From here you can either boot ARK from memory stick, install 6.61 Firmware with ARK on the NAND or install 6.61 Official Firmware.
-
 
 #### Installation On PS Vita
 
