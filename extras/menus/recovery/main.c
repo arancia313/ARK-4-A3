@@ -345,17 +345,22 @@ int main(SceSize args, void *argp) {
         /////////////////////////////////////////
        // Gotta wipe the screen this instant. //
       /////////////////////////////////////////
+      sceDisplayWaitVblankStart();
       pspDebugScreenClear();
       pspDebugScreenSetTextColor(0xFFFFFFFF);
       pspDebugScreenSetXY(5, 5);
-      pspDebugScreenPrintf("--- EXH MENU ---");
-      pspDebugScreenSetXY(5, 8);
+      pspDebugScreenPrintf("    ///////////////////////");
+      pspDebugScreenSetXY(5, 6);
+      pspDebugScreenPrintf("  //// exh Manager //////")
+      pspDebugScreenSetXY(5, 7);
+      pspDebugScreenPrintf("///////////////////////")
+      pspDebugScreenSetXY(5, 10)
       pspDebugScreenPrintf("\nPress Triangle to exit.");
       sceCtrlPeekBufferPositive(&pad, 1);
       if (pad.Buttons & PSP_CTRL_TRIANGLE) { 
         running = 0; 
     }
-      sceKernelDelayThread(16000);
+    sceKernelDelayThread(30000);
     }
  }
 int module_start(int argc, void* argv){
