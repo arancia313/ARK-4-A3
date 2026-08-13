@@ -249,7 +249,7 @@ int main(SceSize args, void *argp) {
         "ARK A3 CFW Settings",
         "Plugins Manager",
         "PRO Shell",
-        "Run /PSP/GAME/RECOVERY/EBOOT.PBP"
+        "Run /PSP/GAME/RECOVERY/EBOOT.PBP",
         "exh Manager"
     };
 
@@ -275,7 +275,11 @@ int main(SceSize args, void *argp) {
     SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
     if (f < 0) f = sceIoOpen("ef0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
     if (f >= 0) { sceIoRead(f, &exh_buf, 1); sceIoClose(f); }
-    int size = (exh_buf == '0') ? 6 : 7;
+    int size = sizeof(options) / sizeof(options[0]);
+    if (exh_buf == '0') {
+        size = 6;
+    }
+    
     int dir = 0;
 
     draw(options, size, dir);
