@@ -364,7 +364,7 @@ int main(SceSize args, void *argp) {
         pspDebugScreenPrintf("%s Option 2", (index == 1) ? ">" : " " );
         
         // --- Don't think about this... ---
-        sceCtrReadBufferPositive(&pad, 1);
+        sceCtrlReadBufferPositive(&pad, 1);
         if (pad.Buttons & PSP_CTRL_UP) index = 0;
         if (pad.Buttons & PSP_CTRL_DOWN) index = 1;
         if (pad.Buttons & PSP_CTRL_TRIANGLE) { 
