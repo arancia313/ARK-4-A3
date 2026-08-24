@@ -155,7 +155,7 @@ static void patch_sysconf_plugin_module(SceModule2 *mod) {
         char *p = (char *)sceKernelGetBlockHeadAddr(uid);
         // Version info patch
 
-        char verinfo[] = "1.50 ARK-4 A3 CFW";
+        char verinfo[] = "1.50 ARK-4 A3CFW";
         ascii2utf16((char *)p, verinfo);
 
         addrhigh = (u32)p >> 16;

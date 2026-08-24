@@ -197,7 +197,7 @@ static void draw(char** options, int size, int dir){
     printf("********************************************************************");
 
     pspDebugScreenSetXY(0, 2);
-    printf("* ARK-4 A3 Recovery Menu *                                            *");
+    printf("* ARK-4 A3Recovery Menu *                                            *");
     pspDebugScreenSetXY(0, 3);
     printf("**************************                                            *");
     pspDebugScreenSetXY(0, 4);
@@ -272,9 +272,9 @@ int main(SceSize args, void *argp) {
     }
 
     char exh_buf = 0;
-    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
-    if (f < 0) f = sceIoOpen("ef0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
-    if (f >= 0) { sceIoRead(f, &exh_buf, 1); sceIoClose(f); }
+    SceUID fd = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
+    if (fd < 0) fd = sceIoOpen("ef0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
+    if (fd >= 0) { sceIoRead(fd, &exh_buf, 1); sceIoClose(fd); }
     int size = sizeof(options) / sizeof(options[0]);
     if (exh_buf == '0') {
         size = 6;
@@ -339,10 +339,10 @@ int main(SceSize args, void *argp) {
 }
  void activate_exh(void) {
     char def = '1';
-    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
-    if (f >= 0) {
-        sceIoWrite(f, &def, 1);
-        sceIoClose(f);
+    SceUID fd = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
+    if (fd >= 0) {
+        sceIoWrite(fd, &def, 1);
+        sceIoClose(fd);
     }
  }
 
@@ -350,10 +350,10 @@ int main(SceSize args, void *argp) {
 
  void reset_exh(void) {
     char def = '0';
-    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
-    if (f >= 0) {
-        sceIoWrite(f, &def, 1);
-        sceIoClose(f);
+    SceUID fd = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
+    if (fd >= 0) {
+        sceIoWrite(fd, &def, 1);
+        sceIoClose(fd);
     }
  }
 

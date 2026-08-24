@@ -58,9 +58,9 @@ def new_version(psp_path) -> None:
     wy.config(text="Installed!", bg="#0c0",fg="#fff")
 
 def download_latest_ARK():
-    download_latest = requests.get('https://github.com/PSP-Archive/ARK-4/releases/latest')
+    download_latest = requests.get('https://github.com/PSP-Archive/ARK-4 A3/releases/latest')
     ver = download_latest.url.split('/')[-1]
-    download_file = requests.get(f'https://github.com/PSP-Archive/ARK-4/releases/download/{ver}/ARK4.zip')
+    download_file = requests.get(f'https://github.com/PSP-Archive/ARK-4 A3/releases/download/{ver}/ARK4.zip')
     open(f'{tmp}/ARK4.zip', 'wb').write(download_file.content)
     os.chdir(f'{tmp}')
     if os.path.isdir('ARK'):
@@ -202,7 +202,7 @@ def main() -> None:
             sys.exit(1)
         print('Your only seeing this because you choose the wrong OS ;-)')
     print('Running...')
-    root.title('ARK-4 Upgrader')
+    root.title('ARK-4 A3 Upgrader')
     root.geometry('800x150+50+50')
     check = psp()
     frame = ttk.Frame(root)

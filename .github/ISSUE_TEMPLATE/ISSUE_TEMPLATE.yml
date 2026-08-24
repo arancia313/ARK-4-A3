@@ -1,6 +1,6 @@
 ---
-name: ARK-4 Bugs/Issues
-description: "File a bug/issue for any issues related to ARK-4"
+name: ARK-4 A3 Bugs/Issues
+description: "File a bug/issue for any issues related to ARK-4 A3"
 labels: ["bug"]
 body:
   - type: markdown
@@ -263,7 +263,7 @@ body:
   - type: textarea
     attributes:
       label: Custom settings
-      description: "Please list all additional settings from SETTINGS.TXT here if you have any. You can learn about it [here](https://github.com/PSP-Archive/ARK-4/wiki/settings)."
+      description: "Please list all additional settings from SETTINGS.TXT here if you have any. You can learn about it [here](https://github.com/PSP-Archive/ARK-4 A3/wiki/settings)."
       placeholder: |
         "ABXY01234, overclock, on" 
         "XYAB12345, infernocache:rr, on" 

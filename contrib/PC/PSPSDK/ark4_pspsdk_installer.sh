@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# PSPSDK installer script by Yoti for ARK-4 project
+# PSPSDK installer script by Yoti for ARK-4 A3 project
 # 2022-07-01: initial release
 # 2022-07-03: python2 + chown
 # 2022-09-05: use local file
@@ -32,7 +32,7 @@ sudo apt install ./mkpsxiso-2.03-Linux.deb
 rm mkpsxiso-2.03-Linux.deb
 
 if [ ! -f "./pspdev.7z" ]; then
-    link="https://github.com/PSP-Archive/ARK-4/raw/main/contrib/PC/PSPSDK/pspdev.7z"
+    link="https://github.com/PSP-Archive/ARK-4 A3/raw/main/contrib/PC/PSPSDK/pspdev.7z"
     #7z program can't read 7z archives from stdin
     #wget -qO- $link | 7z x -si -o/usr/local/
     wget -q --show-progress $link

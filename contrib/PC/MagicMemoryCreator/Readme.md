@@ -28,7 +28,7 @@
 
 * MeetPatty (DC-ARK)
 
-* Acid_Snake (for the idea/ARK-4 itself/module version of msipl_installer)
+* Acid_Snake (for the idea/ARK-4 A3 itself/module version of msipl_installer)
 
 * John Kelley  (pspdecrypt)
 

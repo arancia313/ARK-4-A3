@@ -1,4 +1,4 @@
-ARK-4 Updater
+ARK-4 A3 Updater
 Ustawienia niestandardowego oprogramowania układowego
 Menedżer wtyczek
 Niestandardowy program uruchamiający
