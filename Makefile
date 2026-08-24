@@ -99,7 +99,7 @@ copy-bin:
 	$(Q)cp loader/live/user/signed_eboot/EBOOT.PBP dist/ARK_Loader/EBOOT.PBP # Signed EBOOT
 	$(Q)cp loader/live/user/psxloader/EBOOT.PBP dist/PSVita/PS1CFW/SCPS10084/
 	$(Q)cp loader/live/kernel/chain_loader/ARK.BIN dist/ARK_30000/ARK.BIN # ARK-2 chainloader
-	$(Q)cp loader/live/kernel/kernel_loader/ARK4.BIN dist/ARK_30000/ARK4.BIN # ARK-4 loader
+	$(Q)cp loader/live/kernel/kernel_loader/ARK4.BIN dist/ARK_30000/ARK4.BIN # ARK-4 A3 loader
 	$(Q)cp loader/live/kernel/psxloader/ARKX.BIN dist/ARK_30000/ARKX.BIN # ARK-X loader
 	$(Q)cp loader/live/kernel/psxloader/ps1cfw_enabler/ps1cfw_enabler.suprx dist/PSVita/PS1CFW/
 	$(Q)cp extras/modules/ef2mapper/ef2uma.suprx dist/PSVita/
@@ -135,8 +135,8 @@ copy-bin:
 	$(Q)cp contrib/PSP/pops_01g.prx dist/PSP/ARK_Full_Installer/kd/
 	$(Q)cp contrib/PSP/popsman.prx dist/PSP/ARK_Full_Installer/kd/
 	$(Q)cp contrib/PSP/libpspvmc.prx dist/PSP/ARK_Full_Installer/vsh/module/
-	$(Q)cp extras/apps/uninstaller/EBOOT.PBP dist/PSP/ARK_Uninstaller # ARK-4 Uninstaller
-	$(Q)cp extras/150kernel/installer/EBOOT.PBP dist/PSP/ARK_150Addon # ARK-4 150 Kernel Addon
+	$(Q)cp extras/apps/uninstaller/EBOOT.PBP dist/PSP/ARK_Uninstaller # ARK-4 A3 Uninstaller
+	$(Q)cp extras/150kernel/installer/EBOOT.PBP dist/PSP/ARK_150Addon # ARK-4 A3 150 Kernel Addon
 	$(Q)cp contrib/PSP/GAME/ARK_DC/libpsardumper.prx dist/PSP/ARK_150Addon
 	$(Q)cp contrib/PSP/GAME/ARK_DC/pspdecrypt.prx dist/PSP/ARK_150Addon
 	$(Q)cp contrib/UPDATER.TXT dist/ARK_30000/

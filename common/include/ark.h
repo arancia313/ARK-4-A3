@@ -95,7 +95,7 @@ extern "C" {
 #define ARK_THEME_FILE "THEME.ARK" // theme file for arkMenu
 #define ARK_LANG_FILE "LANG.ARK" // language files
 #define ARK_BIN "ARK.BIN" // ARK-2 payload
-#define ARK4_BIN "ARK4.BIN" // ARK-4 payload
+#define ARK4_BIN "ARK4.BIN" // ARK-4 A3 payload
 #define ARKX_BIN "ARKX.BIN" // ARK-X payload
 #define LIVE_EXPLOIT_ID "exh A3" // default loader name
 #define CIPL_EXPLOIT_ID "cIPL A3" // loader name for Custom IPL. Remember, cIPL is not a custom firmware itself, it's an exploit for making the CFW permanent.

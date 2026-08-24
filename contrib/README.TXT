@@ -68,7 +68,7 @@ You an also run ARK within Adrenaline to achieve a Hybrid CFW.
     - Works on Firmware 3.60 up to 3.74, requires Henkaku/h-encore and `Adrenaline` (https://github.com/isage/Adrenaline).
     - (Skip this step if `Standalone` is already installed) Install `ARK_30000` folder into `/PSP/SAVEDATA/` folder.
     - Install `ARK_Loader` folder into `/PSP/GAME/` folder.
-    - To make ARK-4 automatically load with Adrenaline there are two options.
+    - To make ARK-4 A3 automatically load with Adrenaline there are two options.
     - (Option 1, new method) Rename `ARK_Loader` (installed previously) to `BOOT`.
         Go to Adrenaline's Recovery Menu and in the Configuration page enable the `Autorun program` option.
         This only works on newer Adrenaline versions as the feature isn't implemented in older versions.

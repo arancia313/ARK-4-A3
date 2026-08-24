@@ -18,7 +18,7 @@
 #include "main.h"
 #include <functions.h>
 
-char* running_ark = "Running ARK-4 A3 in ?PS? mode";
+char* running_ark = "Running ARK-4 A3in ?PS? mode";
 
 ARKConfig default_config = {
     .magic = ARK_CONFIG_MAGIC,

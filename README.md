@@ -1,8 +1,8 @@
 ![LOGO](https://github.com/user-attachments/assets/e0cd5cab-ff79-4c17-a903-544a4d2dd570)
 
-# Unofficial: This is a maintained version of [ARK-4](https://github.com/PSP-Archive/ARK-4).
+# Unofficial: This is a maintained version of [ARK-4 A3](https://github.com/PSP-Archive/ARK-4 A3).
 
-# ARK-4 e/CFW for the PSP and PS Vita.
+# ARK-4 A3 e/CFW for the PSP and PS Vita.
 
 New, updated, improved and modern `Custom Firmware` for the `PSP` and `PS Vita`'s `ePSP`.
 Simple to use and full of unique features, `ARK CFW` aims at keeping the `PSP` experience fresh. Being a successor to `PRO` and `ME`,
@@ -10,7 +10,7 @@ Simple to use and full of unique features, `ARK CFW` aims at keeping the `PSP` e
 as well as unique and exclusive new features not found anywhere else.
 
 ### More Information in WIKI
-<a style="font-weight: bold; font-size:32px; text-decoration: underline;" href="https://github.com/PSP-Archive/ARK-4/wiki">ARK-4 WIKI</a>
+<a style="font-weight: bold; font-size:32px; text-decoration: underline;" href="https://github.com/PSP-Archive/ARK-4 A3/wiki">ARK-4 A3 WIKI</a>
 <br>
 
 ### Table of Contents (Quick Links)
@@ -46,7 +46,7 @@ as well as unique and exclusive new features not found anywhere else.
 
 
 ![CFW Settings](.github/screenshots/cfw_settings.bmp "CFW Settings")
-![cIPL](https://github.com/PSP-Archive/ARK-4/wiki/.res/system_settings.bmp "System Info")
+![cIPL](https://github.com/PSP-Archive/ARK-4 A3/wiki/.res/system_settings.bmp "System Info")
 
 #### Installation On PSP
 
@@ -70,7 +70,7 @@ as well as unique and exclusive new features not found anywhere else.
 ##### Permanent CFW via cIPL
 
 - Works on all PSP models, including testkits and devkits.
-- ARK-4 A3 completely accepts cIPL, but be careful not to destroy your psp...
+- ARK-4 A3completely accepts cIPL, but be careful not to destroy your psp...
 - Installer will choose the correct version according to your model.
 - Some models can install either the Classic cIPL or the New cIPL.
 - Copy `ARK_cIPL` folder to `/PSP/GAME/` and run the program.
@@ -130,7 +130,7 @@ There are two types of installation on PS Vita. You can use either one or both.
 - Works on Firmware 3.60 up to 3.74, requires Henkaku/h-encore and <a href="https://github.com/isage/Adrenaline">Adrenaline</a> (Isage's fork is recommended, but original will work too).
 - Install `ARK_30000` folder into `pspemu/PSP/SAVEDATA/` folder if it isn't already there.
 - Install `ARK_Loader` folder into `pspemu/PSP/GAME/` folder.
-- To make ARK-4 automatically load with Adrenaline there are two options.
+- To make ARK-4 A3 automatically load with Adrenaline there are two options.
 - (Option 1, new method) Rename `ARK_Loader` to `BOOT`. Go to Adrenaline's Recovery Menu and in the Configuration page enable the `Autorun program` option. This only works on newer Adrenaline versions as the feature isn't implemented in older versions.
 - (Option 2, old method) Use <a href="https://github.com/ONElua/AdrenalineBubbleManager/releases">Adrenaline Bubbles Manager</a> to create an autoboot bubble for `ARK Loader`. This method is deprecated as it will install an older version of Adrenaline.
 - Note: this does not permanently modify `Adrenaline` in any way.
@@ -140,7 +140,7 @@ There are two types of installation on PS Vita. You can use either one or both.
 
 ##### There are three ways to update ARK:
 
-- Option 1: Use the `System Update` ( `ARK-4 Updater` ) feature in the XMB. Requires your PSP/Vita to be connected to the internet.
+- Option 1: Use the `System Update` ( `ARK-4 A3 Updater` ) feature in the XMB. Requires your PSP/Vita to be connected to the internet.
 - Option 2: Copy the `UPDATE` folder to `/PSP/GAME/` and run it.
 - Option 3: Copy `ARK_30000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
 
@@ -165,9 +165,9 @@ This is a little atrocious, because you will lose your configurations.
 - `ARK-1`: original port/rewrite of `PRO CFW` for the `PS Vita`. Codenamed `PROVITA`. Source code can be found here: https://github.com/PSP-Archive/ARK-1-PROVita-
 - `ARK-2`: dynamic patching allows it to work with most of `PS Vita` firmwares. Source code can be found here: https://github.com/PSP-Archive/ARK-2
 - `ARK-3`: device-specific runtime allows `ARK` to run in multiple scenarios (`ePSP` and `ePSX`). Source code can be found here: https://github.com/PSP-Archive/ARK-3
-- `ARK-4`: ported to the original `PSP`. Huge amounts of improvements and fixes over previous versions.
+- `ARK-4 A3`: ported to the original `PSP`. Huge amounts of improvements and fixes over previous versions.
 
-`Note`: this is a simplified `changelog`, for a full version you can visit here: https://github.com/PSP-Archive/ARK-4/blob/main/CHANGELOG.md
+`Note`: this is a simplified `changelog`, for a full version you can visit here: https://github.com/PSP-Archive/ARK-4 A3/blob/main/CHANGELOG.md
 
 
 #### Warnings
