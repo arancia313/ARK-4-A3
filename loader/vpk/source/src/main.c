@@ -57,9 +57,9 @@ int main(int argc, const char *argv[]) {
     SceCtrlData pad;
     int selection = 0;
     const char *options[] = {
-        "Install ARK-4, ARK-X and All Plugins",
-        "Install Only ARK-4 (No Plugins)",
-        "Install ARK-4 and Analog Plugin",
+        "Install ARK-4 A3, ARK-X and All Plugins",
+        "Install Only ARK-4 A3 (No Plugins)",
+        "Install ARK-4 A3 and Analog Plugin",
         "Install Only Analog Plugin",
         "Install ARK-X and PS1 Plugin",
         "Exit"
@@ -105,11 +105,11 @@ int main(int argc, const char *argv[]) {
 
     switch (selection) {
         case 0:
-            displayMsg("Installing ARK-4 and ARK-X", "Installing full package...");
+            displayMsg("Installing ARK-4 A3 and ARK-X", "Installing full package...");
             doInstall();
 
             {
-                const char *launch_options[] = { "Launch ARK-4", "Launch ARK-X" };
+                const char *launch_options[] = { "Launch ARK-4 A3", "Launch ARK-X" };
                 int launch_sel = 0;
                 int launch_num = sizeof(launch_options) / sizeof(launch_options[0]);
 
@@ -163,12 +163,12 @@ int main(int argc, const char *argv[]) {
             return 0;
 
         case 1:
-            displayMsg("Installing ARK-4", "Installing ARK-4 only (no plugins)...");
+            displayMsg("Installing ARK-4 A3", "Installing ARK-4 A3 only (no plugins)...");
             installARK4Only();
             break;
 
         case 2:
-            displayMsg("Installing ARK-4 and Analog Plugin", "Installing ARK-4 and analog plugin...");
+            displayMsg("Installing ARK-4 A3 and Analog Plugin", "Installing ARK-4 A3 and analog plugin...");
             installARK4Only();
             installAnalogPlugin();
             taiReloadConfig();
@@ -207,10 +207,10 @@ int main(int argc, const char *argv[]) {
         const char *launch_opts[2];
         int num_launch = 0;
         if (selection == 1) {
-            launch_opts[0] = "Launch ARK-4";
+            launch_opts[0] = "Launch ARK-4 A3";
             num_launch = 1;
         } else if (selection == 2) {
-            launch_opts[0] = "Launch ARK-4";
+            launch_opts[0] = "Launch ARK-4 A3";
             num_launch = 1;
         } else if (selection == 4) {
             launch_opts[0] = "Launch ARK-X";

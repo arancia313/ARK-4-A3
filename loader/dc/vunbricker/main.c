@@ -289,9 +289,9 @@ void MainMenu(int sel)
         "Install 6.61",
         "NAND operations",
         "Hardware Info",
-        "Boot 6.61 ARK from MemoryStick",
+        "Boot 6.61 ARK from the Memory Stick",
         "Shutdown",
-        "Reboot Device"
+        "Reboot PSP"
     };
 
     vlfGuiCentralMenu(7, items, sel, OnMainMenuSelect, 0, 0);

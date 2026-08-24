@@ -115,7 +115,7 @@ typedef struct ARKConfig{
 
 ARKConfig _arkconf = {
     .magic = ARK_CONFIG_MAGIC,
-    .arkpath = "ms0:/PSP/SAVEDATA/ARK_A3000/", // default path for ARK files
+    .arkpath = "ms0:/PSP/SAVEDATA/ARK_30000/", // default path for ARK files
     .exploit_id = "Infinity",
     .launcher = {0},
     .exec_mode = PSP_ORIG, // run ARK in PSP mode

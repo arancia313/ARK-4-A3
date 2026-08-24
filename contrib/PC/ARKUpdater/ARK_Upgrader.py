@@ -48,7 +48,7 @@ def new_version(psp_path) -> None:
 
     os.chdir('ARK')
 
-    shutil.copytree('./ARK_A3000', f'{psp_path}/PSP/SAVEDATA/ARK_A3000', dirs_exist_ok=True)
+    shutil.copytree('./ARK_30000', f'{psp_path}/PSP/SAVEDATA/ARK_30000', dirs_exist_ok=True)
     shutil.copytree('./ARK_Live', f'{psp_path}/PSP/GAME/ARK_Live', dirs_exist_ok=True)
 
     os.chdir('../')
@@ -71,17 +71,17 @@ def download_latest_ARK():
 
 def setup_ark_dc(_path=None):
     # TODO: ARK-DC detect that ms0:/TM/DCARK/ exists
-    # and then copy ARK_A3000 to that folder
+    # and then copy ARK_30000 to that folder
     # extract FLASH0.ARK into ms0:/TM/DCARK/kd/
     if not os.path.exists(f'{_path}/TM/DCARK/'):
         os.makedirs(f'{_path}/TM/DCARK/')
     download_latest_ARK()
     if not os.path.exists(f'{_path}/TM/DCARK/ARK_1234'):
         os.makedirs(f'{_path}/TM/DCARK/ARK_1234')
-    shutil.copytree(f'{tmp}/ARK/ARK_A3000', f'{_path}/TM/DCARK/ARK_1234', dirs_exist_ok=True)
+    shutil.copytree(f'{tmp}/ARK/ARK_30000', f'{_path}/TM/DCARK/ARK_1234', dirs_exist_ok=True)
     if not os.path.exists(f'{_path}/TM/DCARK/kd/'):
         os.makedirs(f'{_path}/TM/DCARK/kd/') 
-    shutil.copyfile(f'{tmp}/ARK/ARK_A3000/FLASH0.ARK', f'{_path}/TM/DCARK/kd/FLASH0.ARK')
+    shutil.copyfile(f'{tmp}/ARK/ARK_30000/FLASH0.ARK', f'{_path}/TM/DCARK/kd/FLASH0.ARK')
 
 def dropdown_update(val, force_upgrade=None, def_text=None, ARKDC=None) -> None:
     def_text.destroy()
@@ -99,18 +99,18 @@ def dropdown_update(val, force_upgrade=None, def_text=None, ARKDC=None) -> None:
             return
 
         if os.path.isdir('PSP') and os.path.isdir('SEPLUGINS') or os.path.isdir('psp') and os.path.isdir('seplugins'):
-            if not os.path.exists('./PSP/SAVEDATA/ARK_A3000'):
+            if not os.path.exists('./PSP/SAVEDATA/ARK_30000'):
                 install = mb.askquestion('ARK does not seem to be installed', 'Would you like to install it?')
                 if install == 'no':
                     root.destroy()
-            if os.path.exists('./PSP/SAVEDATA/ARK_A3000'):
-                os.chdir('./PSP/SAVEDATA/ARK_A3000')
+            if os.path.exists('./PSP/SAVEDATA/ARK_30000'):
+                os.chdir('./PSP/SAVEDATA/ARK_30000')
                 with open('FLASH0.ARK', 'rb') as local_version:
                     data = local_version.read()
                     md5 = hashlib.md5(data).hexdigest()
                     local_version.close()
                     download_latest_ARK()
-                with open(f'{tmp}/ARK/ARK_A3000/FLASH0.ARK', 'rb') as remote_version:
+                with open(f'{tmp}/ARK/ARK_30000/FLASH0.ARK', 'rb') as remote_version:
                     r_data = remote_version.read()
                     r_md5 = hashlib.md5(r_data).hexdigest()
                     remote_version.close()

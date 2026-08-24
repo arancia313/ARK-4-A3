@@ -1,3 +1,4 @@
+void exh_submenu(void);
 #include <pspsdk.h>
 #include <pspkernel.h>
 #include <pspdebug.h>
@@ -6,9 +7,7 @@
 #include <systemctrl.h>
 #include <systemctrl_se.h>
 #include <ark.h>
-
 #include <main.h>
-
 #define SCREEN_WIDTH 58
 #define SCREEN_HEIGHT 33 
 
@@ -108,16 +107,16 @@ static int launchRecoveryApp(char* p){
 static void checkArkPath(){
     int fd;
 
-    fd = sceIoDopen("ef0:/PSP/SAVEDATA/ARK_A3000");
+    fd = sceIoDopen("ef0:/PSP/SAVEDATA/ARK_30000");
     if (fd >= 0){
-        strcpy(ark_config->arkpath, "ef0:/PSP/SAVEDATA/ARK_A3000/");
+        strcpy(ark_config->arkpath, "ef0:/PSP/SAVEDATA/ARK_30000/");
         sceIoDclose(fd);
         return;
     }
 
-    fd = sceIoDopen("ms0:/PSP/SAVEDATA/ARK_A3000");
+    fd = sceIoDopen("ms0:/PSP/SAVEDATA/ARK_30000");
     if (fd >= 0){
-        strcpy(ark_config->arkpath, "ms0:/PSP/SAVEDATA/ARK_A3000/");
+        strcpy(ark_config->arkpath, "ms0:/PSP/SAVEDATA/ARK_30000/");
         sceIoDclose(fd);
         return;
     }
@@ -139,18 +138,18 @@ static int selected_choice(u32 choice) {
 
     case 0:
         pspDebugScreenSetXY(25, 30);
-        printf("Good-bye ;-)");
+        printf("Goodbye! :)");
         sceKernelDelayThread(100000);
         return 0;
     case 1:
         //TODO USB Toggle
         pspDebugScreenSetXY(25, 30);
         if (usb_is_enabled){
-            printf("Disabling USB...");
+            printf("Disabling the USB...");
             USB_disable();
         }
         else{
-            printf("Enabling USB...");
+            printf("Enabling the USB...");
             USB_enable();
         }
         sceKernelDelayThread(1000000);
@@ -175,12 +174,17 @@ static int selected_choice(u32 choice) {
             char* p = findRecoveryApp();
             pspDebugScreenSetXY(20, 30);
             if (p) printf("Booting %s", p);
-            else printf("Not found :(");
+            else printf("Not found! DX");
             sceKernelDelayThread(2000000);
             if (p){
                 launchRecoveryApp(p);
                 return 0;
             }
+            return 1;
+        }
+    case 6:
+        {
+            exh_submenu();
             return 1;
         }
     }
@@ -193,9 +197,9 @@ static void draw(char** options, int size, int dir){
     printf("********************************************************************");
 
     pspDebugScreenSetXY(0, 2);
-    printf("* ARK-4 Recovery Menu *                                            *");
+    printf("* ARK-4 A3 Recovery Menu *                                            *");
     pspDebugScreenSetXY(0, 3);
-    printf("***********************                                            *");
+    printf("**************************                                            *");
     pspDebugScreenSetXY(0, 4);
     printf("*                                                                  *");
 
@@ -241,11 +245,12 @@ int main(SceSize args, void *argp) {
     SceCtrlData pad;
     char *options[] = {
         "Exit",
-        "Toggle USB",
-        "Custom Firmware Settings",
+        "Toggle the USB",
+        "ARK A3 CFW Settings",
         "Plugins Manager",
         "PRO Shell",
-        "Run /PSP/GAME/RECOVERY/EBOOT.PBP"
+        "Run /PSP/GAME/RECOVERY/EBOOT.PBP",
+        "exh Manager"
     };
 
     char* usb_options[] = {
@@ -266,7 +271,15 @@ int main(SceSize args, void *argp) {
         options[1] = usb_options[0];
     }
 
-    int size = (sizeof(options) / sizeof(options[0]))-1;
+    char exh_buf = 0;
+    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
+    if (f < 0) f = sceIoOpen("ef0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_RDONLY, 0777);
+    if (f >= 0) { sceIoRead(f, &exh_buf, 1); sceIoClose(f); }
+    int size = sizeof(options) / sizeof(options[0]);
+    if (exh_buf == '0') {
+        size = 6;
+    }
+    
     int dir = 0;
 
     draw(options, size, dir);
@@ -324,7 +337,85 @@ int main(SceSize args, void *argp) {
     sceKernelExitGame();
     return 0;
 }
+ void activate_exh(void) {
+    char def = '1';
+    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
+    if (f >= 0) {
+        sceIoWrite(f, &def, 1);
+        sceIoClose(f);
+    }
+ }
 
+  // Dunk the exh in the bin! Got it!
+
+ void reset_exh(void) {
+    char def = '0';
+    SceUID f = sceIoOpen("ms0:/PSP/SAVEDATA/ARK_30000/exh.txt", PSP_O_WRONLY | PSP_O_CREAT | PSP_O_TRUNC, 0777);
+    if (f >= 0) {
+        sceIoWrite(f, &def, 1);
+        sceIoClose(f);
+    }
+ }
+
+ void exh_submenu(void) {
+    int running = 1;
+    int index = 0;
+    int redraw = 1;
+    SceCtrlData pad;
+
+    while (running) {
+        /////////////////////////////////////////
+       // Gotta wipe the screen this instant. //
+      /////////////////////////////////////////
+      if (redraw) {
+        sceDisplayWaitVblankStart();
+        pspDebugScreenClear();
+        pspDebugScreenSetTextColor(0xFFFFFFFF);
+        pspDebugScreenSetXY(5, 5);
+        pspDebugScreenPrintf("    ///////////////////////");
+        pspDebugScreenSetXY(5, 6);
+        pspDebugScreenPrintf("  //// exh Manager //////");
+        pspDebugScreenSetXY(5, 7);
+        pspDebugScreenPrintf("///////////////////////");
+      
+        // --- SELECTABLES ---
+
+        pspDebugScreenSetXY(5, 10);
+        pspDebugScreenPrintf("%s Activate exh", (index == 0) ? ">" : " " );
+        pspDebugScreenSetXY(5, 11);
+        pspDebugScreenPrintf("%s Reset exh", (index == 1) ? ">" : " " );
+
+        redraw = 0;
+
+      }
+        // --- Don't think about this... ---
+        sceCtrlReadBufferPositive(&pad, 1);
+        // --- For reading the pad output. ---
+
+        // --- controls. ---
+        if (pad.Buttons & PSP_CTRL_UP) {
+            index = 0;
+            redraw = 1;
+        }
+        if (pad.Buttons & PSP_CTRL_DOWN) {
+            index = 1;
+            redraw = 1;
+        }
+         // --- Managing button selection ---
+
+         if (pad.Buttons & PSP_CTRL_CROSS) {
+            if (index == 0) {
+                activate_exh();
+            } else if (index == 1) {
+                reset_exh();
+            }
+         }
+        if (pad.Buttons & PSP_CTRL_TRIANGLE) { 
+            running = 0; 
+        }
+    sceKernelDelayThread(30000);
+    }
+ }
 int module_start(int argc, void* argv){
 
     psp_model = kuKernelGetModel();
@@ -334,4 +425,6 @@ int module_start(int argc, void* argv){
 
     int uid = sceKernelCreateThread("ClassicRecovery", main, 16 - 1, 32*1024, PSP_THREAD_ATTR_USER | PSP_THREAD_ATTR_VFPU, NULL);
     sceKernelStartThread(uid, 0, NULL);
+    return 0;
 }
+

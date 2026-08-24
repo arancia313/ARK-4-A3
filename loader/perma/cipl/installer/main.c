@@ -166,7 +166,7 @@ void classicipl_menu(){
     size = pspIplUpdateGetIpl(big_buf);
 
     if(size < 0) {
-        ErrorExit(5000,"Failed to get IPL!\n");
+        ErrorExit(5000,"Failed to get the IPL!\n");
     }
 
     printf("\nCustom IPL Flasher for 6.6x.\n\n\n");
@@ -389,11 +389,11 @@ void newipl_menu(const char* config){
 
     printf(" Press X to install cIPL\n");
 
-    printf(" Press O to restore Original IPL.\n");
+    printf(" Press O to go back to Original Sony IPL.\n");
 
     if(!config && model < 2 && !is_ta88v3()) {
 	    allow_classic_install = 1;
-	    printf(" Press L to intall Classic IPL.\n");
+	    printf(" Press L to install Classic IPL.\n");
     }
 
     printf(" Press R to cancel\n\n");
@@ -463,11 +463,11 @@ int main()
     if(devkit != 0x06060010 && devkit != 0x06060110) {
 	int check_dcark = sceIoDopen("ms0:/TM/DCARK");
 	if(check_dcark<0) {
-        	ErrorExit(5000,"DCARK MISSING, INSTALL IT FIRST!\n");
+        	ErrorExit(5000,"DCARK IS MISSING, INSTALL IT FIRST!\n");
 	}
 	else {
 		sceIoDclose(check_dcark);
-		pspDebugScreenPrintf("After install your PSP will be 'bricked', turn on holding LT ( Left Trigger ) to boot DCARK\n");
+		pspDebugScreenPrintf("This is just a test: After install, your PSP wil be 'bricked', but perfectly stable. There is no reason to panic, though. Turn the PSP on by holding L to boot up DCARK.\n");
 		sceKernelDelayThread(4*1000*1000);
 		pspDebugScreenClear();
 	}
@@ -477,7 +477,7 @@ int main()
     SceModule2 infinity_mod;
     SceIoStat dc_stat;
     if (kuKernelFindModuleByName("InfinityControl", &infinity_mod) == 0 && sceIoGetstat("ms0:/TM/DCARK/msipl.raw", &dc_stat)<0){
-        ErrorExit(5000, "ERROR: installing cIPL over Infinity is risky, make sure you install DC-ARK first before doing this!");
+        ErrorExit(5000, "ERROR: installing cIPL over Infinity is very risky, make sure you install DC-ARK first before doing this to recover your PSP if it's bricked!");
     }
 
     kpspident = pspSdkLoadStartModule("kpspident.prx", PSP_MEMORY_PARTITION_KERNEL);
@@ -496,7 +496,7 @@ int main()
     }
 
     if (sceSysconGetBaryonVersion(&baryon_ver) < 0) {
-        ErrorExit(5000, "Could not determine baryon version!\n");
+        ErrorExit(5000, "Could not determine your baryon version!\n");
     }
 
     // check if running ARK

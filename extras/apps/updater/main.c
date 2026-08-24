@@ -93,7 +93,7 @@ void checkArkConfig(ARKConfig* ark_config){
     if (strcmp(ark_config->arkpath, SEPLUGINS_MS0) == 0 || (fd = sceIoDopen(path)) < 0){
 		lite = 1;
         // create savedata folder, first attempt on ef0 for PSP Go
-        strcpy(ark_config->arkpath, SAVEDATA_EF0 DEFAULT_ARK_FOLDER); // ef0:/PSP/SAVEDATA/ARK_A3000
+        strcpy(ark_config->arkpath, SAVEDATA_EF0 DEFAULT_ARK_FOLDER); // ef0:/PSP/SAVEDATA/ARK_30000
         sceIoMkdir(ark_config->arkpath, 0777);
         if ((fd = sceIoDopen(ark_config->arkpath)) < 0){
             // second attempt on ms0 for every other device
@@ -170,9 +170,9 @@ int main(int argc, char * argv[])
 
     sceIoLseek32(my_fd, header.psar_offset, PSP_SEEK_SET);
 
-    pspDebugScreenPrintf("Extracting ARK_A3000\n");
+    pspDebugScreenPrintf("Extracting ARK_30000\n");
 
-    // extract ARK_A3000
+    // extract ARK_30000
 	if(lite>0)
 		strcat(ark_config.arkpath, "/"); // fix from deletion
     extractArchive(my_fd, ark_config.arkpath, NULL);
@@ -272,7 +272,7 @@ int main(int argc, char * argv[])
         sceIoRmdir(eboot_path);
     }
 
-	// lite ARK_A3000 removal
+	// lite ARK_30000 removal
 	if(lite>0) {
 		pspDebugScreenPrintf("\nLite mode detected!\n\n");
 		char lite_path[64];
@@ -408,7 +408,7 @@ void extractArchive(int fdr, char* dest_path, int (*filter)(char*)){
     				char *res = (char*)malloc(length+1);
     				strncpy(res, filepath, length);
     				res[length] = '\0';
-                    pspDebugScreenPrintf("ERROR: Do you have ARK_A3000 directory in %s ?\n", res);
+                    pspDebugScreenPrintf("ERROR: Do you have ARK_30000 directory in %s ?\n", res);
     				free(res);
                     sceIoClose(fdr);
     				SceCtrlData pad;

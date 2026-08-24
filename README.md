@@ -32,6 +32,8 @@ as well as unique and exclusive new features not found anywhere else.
 
 - Built-in game fixes using the anti-CFW engine `Stargate`.
 
+- Built-in .sb and .sb3 support (BETA!)
+
 - `New cIPL` compatible with all PSP models, for a true permanent CFW with enhanced brick protection.
 
 - Includes `Despertar del Cementerio Version 10`, allowing to unbrick any PSP.
@@ -39,6 +41,8 @@ as well as unique and exclusive new features not found anywhere else.
 - `Custom game launcher` useful when the XMB isn't available or lacks a certain feature.
  
 - `OTA` updates. Fully updateable via the internet.
+
+- Recovery menu. Useful for those who love setting up their plugins and settings directly at bootup (if you have cIPL).
 
 
 ![CFW Settings](.github/screenshots/cfw_settings.bmp "CFW Settings")
@@ -56,7 +60,7 @@ as well as unique and exclusive new features not found anywhere else.
 
 ##### Installation from Official Firmware
 - If no custom firmware is installed (PSP is original).
-- Copy `ARK_A3000` folder into `/PSP/SAVEDATA/` folder.
+- Copy `ARK_30000` folder into `/PSP/SAVEDATA/` folder.
 - Copy `ARK_Loader` folder into `/PSP/GAME/` folder.
 - Launch `ARK Loader`. It will install ARK modules on PSP Flash and boot the CFW.
 - At this point `ARK` will work as a `Live CFW`, meaning that `ARK Loader` will need to be run every time the console is turned off or rebooted.
@@ -99,7 +103,6 @@ as well as unique and exclusive new features not found anywhere else.
 - On compatible models, you can use `Advanced VSH Menu` to create a `Pandora Battery`.
 - From here you can either boot ARK from memory stick, install 6.61 Firmware with ARK on the NAND or install 6.61 Official Firmware.
 
-
 #### Installation On PS Vita
 
 There are two types of installation on PS Vita. You can use either one or both.
@@ -125,7 +128,7 @@ There are two types of installation on PS Vita. You can use either one or both.
 ##### Adrenaline (Patched PSPEmu)
 
 - Works on Firmware 3.60 up to 3.74, requires Henkaku/h-encore and <a href="https://github.com/isage/Adrenaline">Adrenaline</a> (Isage's fork is recommended, but original will work too).
-- Install `ARK_A3000` folder into `pspemu/PSP/SAVEDATA/` folder if it isn't already there.
+- Install `ARK_30000` folder into `pspemu/PSP/SAVEDATA/` folder if it isn't already there.
 - Install `ARK_Loader` folder into `pspemu/PSP/GAME/` folder.
 - To make ARK-4 automatically load with Adrenaline there are two options.
 - (Option 1, new method) Rename `ARK_Loader` to `BOOT`. Go to Adrenaline's Recovery Menu and in the Configuration page enable the `Autorun program` option. This only works on newer Adrenaline versions as the feature isn't implemented in older versions.
@@ -139,7 +142,23 @@ There are two types of installation on PS Vita. You can use either one or both.
 
 - Option 1: Use the `System Update` ( `ARK-4 Updater` ) feature in the XMB. Requires your PSP/Vita to be connected to the internet.
 - Option 2: Copy the `UPDATE` folder to `/PSP/GAME/` and run it.
-- Option 3: Copy `ARK_A3000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
+- Option 3: Copy `ARK_30000` folder and (on PSP) run `ARK Loader` again to install new flash0 files.
+
+##### How to update via OTA(Very simple):
+For updating your psp via OTA, you need your PSP to be connected to the internet.
+1. Go to Settings > System Update.
+2. Click "Update via Internet" and connect the PSP to your network with WPA2 (unmodded PSP's only support open networks,
+WEP and WPA, and only 2.4 Ghz).
+3. Let the PSP download the data, and then launch the updater. 
+
+##### How to update your PSP manually (requires the "UPDATE" folder):
+1. Put the "UPDATE" folder on PSP/GAME.
+2. Go to your Memory stick and run the updater.
+
+##### How to update your PSP via the ARK_30000(requires the ARK_30000 folder!):
+This is a little atrocious, because you will lose your configurations.
+1. Copy the ARK_30000 folder on PSP/SAVEDATA.
+2. to not lose your configurations, you need to overwrite all .bin and .prx files without touching the "SETTINGS.TXT" file.
 
 #### Changelog
 
@@ -162,6 +181,6 @@ There are two types of installation on PS Vita. You can use either one or both.
 
 - ARK does not delete itself.
 
-- This may look like some version of Dark Alex's OE or some official release from the ark 4 team, but just know this is a fanmade, unofficial, maintained and forked version of ark 4.
+- This may look like some version of Dark Alex's OE (Maybe M33) or some official release from the ark 4 team, but just know this is a fanmade, unofficial, maintained and forked version of ark 4.
 Just know that official development from the ark 4 team has shifted to ark 5 entirely, but know that this is not official. This version is made to keep ark 4 alive.
 </p>
