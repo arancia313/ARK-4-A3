@@ -76,7 +76,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } usbcharge = {
-    "USB Charge",
+    "USB Recharging",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.usbcharge),
@@ -90,7 +90,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_CLOCK_OPTIONS];
 } clock_game = {
-    "CPU Clock in Game",
+    "CPU Clock in the Game",
     MAX_CLOCK_OPTIONS,
     0,
     &(cfw_config.clock_game),
@@ -104,7 +104,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_CLOCK_OPTIONS];
 } clock_vsh = {
-    "CPU Clock in XMB",
+    "CPU Clock in the XMB",
     MAX_CLOCK_OPTIONS,
     0,
     &(cfw_config.clock_vsh),
@@ -118,7 +118,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } launcher = {
-    "Autoboot Launcher",
+    "Autoboot the Launcher at startup",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.launcher),
@@ -132,7 +132,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } highmem = {
-    "Use Extra Memory",
+    "Use the Extra Memory",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.highmem),
@@ -146,7 +146,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } mscache = {
-    "Memory Stick Speedup",
+    "Speed up the Memory Stick",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.mscache),
@@ -160,7 +160,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[3];
 } infernocache = {
-    "Inferno Cache",
+    "Infernal Cache",
     3,
     0,
     &(cfw_config.infernocache),
@@ -174,7 +174,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } oldplugin = {
-    "Old Plugins on ef0",
+    "Old Plugins on the ef0",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.oldplugin),
@@ -188,7 +188,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } disablepause = {
-    "Disable PSP Go Pause",
+    "Disable the PSP Go's Pause",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.disablepause),
@@ -202,7 +202,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } hibblock = {
-    "Prevent hibernation deletion on PSP Go",
+    "Prevent the hibernation deletion on the PSP Go",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.hibblock),
@@ -216,7 +216,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[4];
 } skiplogos = {
-    "Skip Sony logos",
+    "Skip the Sony logos",
     4,
     0,
     &(cfw_config.skiplogos),
@@ -244,7 +244,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } hidemac = {
-    "Hide Mac Address",
+    "Hide the Mac Address",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.hidemac),
@@ -258,7 +258,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } hidedlc = {
-    "Hide DLC",
+    "Hide the DLC",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.hidedlc),
@@ -272,7 +272,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } noled = {
-    "Turn off LEDs",
+    "Turn off the LEDs",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.noled),
@@ -286,7 +286,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } noumd = {
-    "Disable UMD Drive",
+    "Disable the UMD Drive",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.noumd),
@@ -300,7 +300,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } noanalog = {
-    "Disable Analog Stick",
+    "Disable the Analog Stick",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.noanalog),
@@ -314,7 +314,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } qaflags = {
-    "QA Flags",
+    "Enable QA Flags",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.qaflags),
