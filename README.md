@@ -46,7 +46,7 @@ as well as unique and exclusive new features not found anywhere else.
 
 
 ![CFW Settings](.github/screenshots/cfw_settings.bmp "CFW Settings")
-![cIPL](https://github.com/PSP-Archive/ARK-4/wiki/.res/system_settings.bmp "System Info")
+![cIPL](https://github.com/PSP-Archive/ARK-4 A3/wiki/.res/system_settings.bmp "System Info")
 
 #### Installation On PSP
 
