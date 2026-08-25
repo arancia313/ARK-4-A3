@@ -80,26 +80,26 @@ typedef struct
 GetItem GetItemes[] =
 {
     { 2, 0, "USB Charge" },
-    { 3, 0, "CPU Clock in Game" },
-    { 4, 0, "CPU Clock in XMB" },
-    { 5, 0, "WPA2 Support" },
-    { 6, 0, "Autoboot Launcher" },
-    { 7, 0, "Use Extra Memory" },
-    { 8, 0, "Memory Stick Speedup" },
-    { 9, 0, "Inferno Cache" },
-    { 10, 0, "Disable PSP Go Pause" },
+    { 3, 0, "CPU Clock in the Game" },
+    { 4, 0, "CPU Clock in the XMB" },
+    { 5, 0, "Support for the WPA2" },
+    { 6, 0, "Autoboot the Launcher at startup" },
+    { 7, 0, "Use the Extra Memory" },
+    { 8, 0, "Speed up the Memory Stick (may be unstable)" },
+    { 9, 0, "Infernal Cache" },
+    { 10, 0, "Disable the PSP Go's Pause" },
     { 11, 0, "Old Plugins on ef0" },
-    { 12, 0, "Prevent hibernation deletion on PSP Go" },
-    { 13, 0, "Skip Sony logos" },
+    { 12, 0, "Prevent the hibernation deletion on PSP Go" },
+    { 13, 0, "Skip the Sony logos" },
     { 14, 0, "Hide PIC0 and PIC1" },
-    { 15, 0, "Hide MAC Address" },
-    { 16, 0, "Hide DLC" },
-    { 17, 0, "Turn off LEDs" },
-    { 18, 0, "Disable UMD Drive" },
-    { 19, 0, "Disable Analog Stick" },
-    { 20, 0, "UMD Region" },
-    { 21, 0, "VSH Region" },
-    { 22, 0, "QA Flags" },
+    { 15, 0, "Hide the MAC Address" },
+    { 16, 0, "Hide the DLC" },
+    { 17, 0, "Turn off the LEDs" },
+    { 18, 0, "Disable the UMD Drive" },
+    { 19, 0, "Disable the Analog Stick" },
+    { 20, 0, "The UMD's Region" },
+    { 21, 0, "The VSH's Region" },
+    { 22, 0, "EnableQA Flags" },
 };
 
 #define PLUGINS_CONTEXT 1
@@ -108,7 +108,7 @@ char* ark_clock_settings[] = {
     "Auto",
     "OverClock",
     "Balanced",
-    "PowerSave"
+    "Power Saved"
 };
 
 char* ark_skiplogos_settings[] = {
@@ -144,7 +144,7 @@ char* ark_settings_infernocache[] = {
 char* ark_plugins_options[] = {
     "Disabled",
     "Enabled",
-    "Remove",
+    "Discard",
 };
 
 char* ark_umdregion_options[] = {
@@ -816,11 +816,11 @@ wchar_t *scePafGetTextPatched(void *a0, char *name)
             char* translated = findTranslation(name);
             if (!translated){
                 if(sce_paf_private_strcmp(name, "xmbmsgtop_sysconf_configuration") == 0)
-                    translated = "Custom Firmware Settings";
+                    translated = "CFW Settings";
                 else if(sce_paf_private_strcmp(name, "xmbmsgtop_sysconf_plugins") == 0)
                     translated = "Plugins Manager";
                 else if(sce_paf_private_strcmp(name, "xmbmsgtop_custom_launcher") == 0)
-                    translated = "Custom Launcher";
+                    translated = "ARKMenu";
                 else if(sce_paf_private_strcmp(name, "xmbmsgtop_custom_app") == 0)
                     translated = "Custom App";
                 else if(sce_paf_private_strcmp(name, "xmbmsgtop_150_reboot") == 0)
