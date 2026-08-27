@@ -1,6 +1,6 @@
 ![LOGO](https://github.com/user-attachments/assets/e0cd5cab-ff79-4c17-a903-544a4d2dd570)
 
-# Unofficial: This is a maintained version of [ARK-4 A3](https://github.com/PSP-Archive/ARK-4 A3).
+# Unofficial: This is a maintained version of [ARK-4](https://github.com/PSP-Archive/ARK-4).
 
 # ARK-4 A3 e/CFW for the PSP and PS Vita.
 
@@ -46,7 +46,7 @@ as well as unique and exclusive new features not found anywhere else.
 
 
 ![CFW Settings](.github/screenshots/cfw_settings.bmp "CFW Settings")
-![cIPL](https://github.com/PSP-Archive/ARK-4 A3/wiki/.res/system_settings.bmp "System Info")
+![cIPL](https://github.com/PSP-Archive/ARK-4/wiki/.res/system_settings.bmp "System Info")
 
 #### Installation On PSP
 
