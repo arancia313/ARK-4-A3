@@ -76,7 +76,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } usbcharge = {
-    "USB Recharging",
+    "USB Charge",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.usbcharge),
@@ -90,7 +90,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_CLOCK_OPTIONS];
 } clock_game = {
-    "CPU Clock in the Game",
+    "CPU Clock in Game",
     MAX_CLOCK_OPTIONS,
     0,
     &(cfw_config.clock_game),
@@ -104,7 +104,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_CLOCK_OPTIONS];
 } clock_vsh = {
-    "CPU Clock in the XMB",
+    "CPU Clock in XMB",
     MAX_CLOCK_OPTIONS,
     0,
     &(cfw_config.clock_vsh),
@@ -118,7 +118,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } launcher = {
-    "Autoboot the Launcher at startup",
+    "Autoboot Launcher",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.launcher),
@@ -132,7 +132,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } highmem = {
-    "Use the Extra Memory",
+    "Use Extra Memory",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.highmem),
@@ -146,7 +146,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } mscache = {
-    "Speed up the Memory Stick",
+    "Memory Stick Speedup",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.mscache),
@@ -160,7 +160,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[3];
 } infernocache = {
-    "Infernal Cache",
+    "Inferno Cache",
     3,
     0,
     &(cfw_config.infernocache),
@@ -174,7 +174,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } oldplugin = {
-    "Old Plugins on the ef0",
+    "Old Plugins on ef0",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.oldplugin),
@@ -188,7 +188,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } disablepause = {
-    "Disable the PSP Go's Pause",
+    "Disable PSP Go Pause",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.disablepause),
@@ -202,7 +202,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } hibblock = {
-    "Prevent the hibernation deletion on the PSP Go",
+    "Prevent hibernation deletion on PSP Go",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.hibblock),
@@ -216,7 +216,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[4];
 } skiplogos = {
-    "Skip the Sony logos",
+    "Skip Sony logos",
     4,
     0,
     &(cfw_config.skiplogos),
@@ -244,7 +244,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } hidemac = {
-    "Hide the Mac Address",
+    "Hide Mac Address",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.hidemac),
@@ -258,7 +258,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } hidedlc = {
-    "Hide the DLC",
+    "Hide DLC",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.hidedlc),
@@ -272,7 +272,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } noled = {
-    "Turn off the LEDs",
+    "Turn off LEDs",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.noled),
@@ -286,7 +286,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } noumd = {
-    "Disable the UMD Drive",
+    "Disable UMD Drive",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.noumd),
@@ -300,7 +300,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } noanalog = {
-    "Disable the Analog Stick",
+    "Disable Analog Stick",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.noanalog),
@@ -314,7 +314,7 @@ static struct {
     unsigned char* config_ptr;
     char* options[MAX_BOOLEAN_OPTIONS];
 } qaflags = {
-    "Enable QA Flags",
+    "QA Flags",
     MAX_BOOLEAN_OPTIONS,
     0,
     &(cfw_config.qaflags),
@@ -871,5 +871,4 @@ void resetCfwSettings() {
     custom_config.push_back("# Enable Extra RAM on GTA LCS and VCS for CheatDeviceRemastered\n");
     custom_config.push_back("ULUS10041 ULUS10160 ULES00151 ULES00502, highmem, on\n");
 }
-
 
