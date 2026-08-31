@@ -872,4 +872,3 @@ void resetCfwSettings() {
     custom_config.push_back("ULUS10041 ULUS10160 ULES00151 ULES00502, highmem, on\n");
 }
 
-

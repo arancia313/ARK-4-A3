@@ -1,11 +1,11 @@
 ---
-name: ARK-4 Feature Request
-description: "Request a new feature for ARK-4"
+name: ARK-4 A3 Feature Request
+description: "Request a new feature for ARK-4 A3"
 labels: ["Feature Request"]
 body:
   - type: markdown
     attributes:
-      value: Please explain in depth your Feature Request for ARK-4.
+      value: Please explain in depth your Feature Request for ARK-4 A3.
   - type: textarea
     attributes:
       label: New Feature

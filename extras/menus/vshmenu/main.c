@@ -22,7 +22,7 @@
 
 /* 
  * avshMenu by krazynez
- * based on PRO vsh, ME vsh, and ultimate vsh, and the Original ARK-4 vshmenu.
+ * based on PRO vsh, ME vsh, and ultimate vsh, and the Original ARK-4 A3 vshmenu.
  * Plus myself and acid_snake's mentally insane thoughts and awesomeness ;-)
  */
 
@@ -101,18 +101,18 @@ int TSRThread(SceSize args, void *argp) {
 
     #ifdef DEBUG
     if (micro > 0 && !ARK_REVISION) 
-        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    ARK %d.%d.%.2i DEBUG    ", major, minor, micro);
+        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    A3 %d.%d.%.2i DEBUG    ", major, minor, micro);
     else if (major==4)
-        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), " ARK %d.%d.%.2i r%i DEBUG ", major, minor, micro, ARK_REVISION);
+        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), " A3 %d.%d.%.2i r%i DEBUG ", major, minor, micro, ARK_REVISION);
     else 
-        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    ARK %d.%d DEBUG    ", major, minor);
+        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    A3 %d.%d DEBUG    ", major, minor);
     #else
     if (micro > 0 && !ARK_REVISION) 
-        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    ARK %d.%d.%.2i    ", major, minor, micro);
+        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    A3 %d.%d.%.2i    ", major, minor, micro);
     else if (major==4)
-        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), " ARK %d.%d.%.2i r%i ", major, minor, micro, ARK_REVISION);
+        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), " A3 %d.%d.%.2i r%i ", major, minor, micro, ARK_REVISION);
     else 
-        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    ARK %d.%d    ", major, minor); 
+        scePaf_snprintf(vsh->ark_version, sizeof(vsh->ark_version), "    A3 %d.%d    ", major, minor); 
     #endif
     
     // load config stuff

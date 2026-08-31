@@ -263,7 +263,7 @@ int main(int argc, char * argv[])
         sceKernelExitGame();
     }
 
-    printf("\n\n\tARK-4 Full Installer\n");
+    printf("\n\n\tARK-4 A3 Full Installer\n");
 
     int cursor = 0;
     while(1) {

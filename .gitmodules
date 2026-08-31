@@ -7,3 +7,6 @@
 [submodule "libs/ya2d"]
 	path = libs/ya2d
 	url = https://github.com/xerpi/ya2d
+[submodule "/mkpsxiso"]
+	path = mkpsxiso
+	url = https://github.com/Lameguy64/mkpsxiso

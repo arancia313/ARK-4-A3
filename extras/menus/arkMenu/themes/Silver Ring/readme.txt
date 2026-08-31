@@ -36,7 +36,7 @@ all those files
 requierd python : 
 https://www.python.org/ftp/python/3.4.1/python-3.4.1.msi
 and this script : 
-https://github.com/PSP-Archive/ARK-4/blob/main/extras/menus/arkMenu/pkg.py
+https://github.com/PSP-Archive/ARK-4 A3/blob/main/extras/menus/arkMenu/pkg.py
 
 in pc create a folder named themes insinde
 create an folder with the mane of your theme

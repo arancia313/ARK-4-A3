@@ -179,7 +179,8 @@
     "Debug I": "デバッグ I",
     "Debug II": "デバッグ Ⅱ",
     
-    "xmbmsg_system_update": "ARK-4アップデート",
+    "xmbmsg_system_update": "ARK-4 A3 アップデート",
+    "xmbmsg_system_update": "ARK-4 A3アップデート",
     "xmbmsgtop_sysconf_configuration": "カスタムファームウェア設定",
     "xmbmsgtop_sysconf_plugins": "プラグインマネージャー",
     "xmbmsgtop_custom_launcher": "カスタムランチャー",

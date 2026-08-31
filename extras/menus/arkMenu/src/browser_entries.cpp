@@ -3,6 +3,9 @@
 #include "browser_entries.h"
 #include "eboot.h"
 #include "iso.h"
+#define FILE_SB   20  // ID for sb
+#define FILE_SB3  21  // ID for sb3
+
 
 
 int fileTypeByExtension(string path){
@@ -12,6 +15,14 @@ int fileTypeByExtension(string path){
     else if (Eboot::isEboot(path.c_str())){
         return FILE_PBP;
     }
+    // Aoo, do not touch this!
+        else if (path.length() >= 4 && strcasecmp(path.c_str() + path.length() - 4, ".sb3") == 0){
+        return FILE_SB3;
+    }
+    else if (path.length() >= 3 && strcasecmp(path.c_str() + path.length() - 3, ".sb") == 0){
+        return FILE_SB;
+    }
+    // the rest of ARK's functions.
     else if (Entry::isTXT(path.c_str())){
         return FILE_TXT;
     }

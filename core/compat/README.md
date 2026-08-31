@@ -1,4 +1,4 @@
-The compatibility layer is a new core CFW module introduced in ARK-4 that allows the CFW to be booted under different devices and environments.
+The compatibility layer is a new core CFW module introduced in ARK-4 A3 that allows the CFW to be booted under different devices and environments.
 
 It serves as a device driver and is loaded right after SystemControl, allowing it to fix or extend the CFW for the device or configuration it's currently running on.
 
