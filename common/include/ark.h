@@ -26,10 +26,10 @@ extern "C" {
 
 // ARK Version
 #define ARK_MAJOR_VERSION 4
-#define ARK_MINOR_VERSION 20
-#define ARK_MICRO_VERSION 69
+#define ARK_MINOR_VERSION 0
+#define ARK_MICRO_VERSION 3
 #define ARK_REVISION      206
-
+#define ARK_A3_VERSION    3
 // Pointers and sizes
 #define ARK_PATH_SIZE 128
 #define ARK_CONFIG 0x08800010 // ARK Runtime configuration backup address
@@ -95,21 +95,21 @@ extern "C" {
 #define ARK_THEME_FILE "THEME.ARK" // theme file for arkMenu
 #define ARK_LANG_FILE "LANG.ARK" // language files
 #define ARK_BIN "ARK.BIN" // ARK-2 payload
-#define ARK4_BIN "ARK4.BIN" // ARK-4 payload
+#define ARK4_BIN "ARK4.BIN" // ARK-4 A3 payload
 #define ARKX_BIN "ARKX.BIN" // ARK-X payload
-#define LIVE_EXPLOIT_ID "Live" // default loader name
-#define CIPL_EXPLOIT_ID "cIPL" // loader name for Custom IPL
+#define LIVE_EXPLOIT_ID "exh A3" // default loader name
+#define CIPL_EXPLOIT_ID "cIPL A3" // loader name for Custom IPL. Remember, cIPL is not a custom firmware itself, it's an exploit for making the CFW permanent.
 #define DC_EXPLOIT_ID "DC" // loader name for Despertar del Cementerio
-#define DEFAULT_ARK_FOLDER "ARK_A3000"
-#define SAVEDATA_MS0 "ms0:/PSP/SAVEDATA/" //the directory where "ARK_A3000" is located.
-#define SAVEDATA_EF0 "ef0:/PSP/SAVEDATA/" //the directory where "ARK_A3000" is located (on pspgo internal, i think it's eflash, not flash0).
+#define DEFAULT_ARK_FOLDER "ARK_30000"
+#define SAVEDATA_MS0 "ms0:/PSP/SAVEDATA/" //the directory where "ARK_30000" is located.
+#define SAVEDATA_EF0 "ef0:/PSP/SAVEDATA/" //the directory where "ARK_30000" is located (on pspgo internal, i think it's eflash, not flash0).
 #define DEFAULT_ARK_PATH SAVEDATA_MS0 DEFAULT_ARK_FOLDER "/" // default path for the ARK files
 #define DEFAULT_ARK_PATH_GO SAVEDATA_EF0 DEFAULT_ARK_FOLDER "/" // default path for the ARK files. I think it's the psp go in here.
 #define ARK_DC_PATH "ms0:/TM/DCARK" // This is for despertar del cementerio and time machine's components, i think.
 #define TM_PATH_W L"\\TM\\DCARK\\"
 
 // Get it? Those are different firmware versions.
-#define FW_661 0x06060110 // System Software 6.61 (It's a requirement for using ARK-4 A3).
+#define FW_661 0x06060110 // System Software 6.61 (for getting the absolute maximum of ARK-4 A3!).
 #define FW_660 0x06060010 // System Software 6.60.
 #define FW_150 0x01050001 // System Software 1.50.
 

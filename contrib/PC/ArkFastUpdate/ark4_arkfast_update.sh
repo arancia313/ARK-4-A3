@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# ArkFast updater script by Yoti for ARK-4 project
+# ArkFast updater script by Yoti for ARK-4 A3 project
 # 2022-09-06: initial release
 # 2022-09-06: fix kexploit -1
 # 2022-09-23: cleanup files
@@ -14,7 +14,7 @@
 #sudo apt install zip unzip -y
 
 if [ "$1" == "" ]; then
-    ark_zip_link="https://github.com/PSP-Archive/ARK-4/releases/latest/download/ARK4.zip"
+    ark_zip_link="https://github.com/PSP-Archive/ARK-4 A3/releases/latest/download/ARK4.zip"
 else
     ark_zip_link="${1//tag/download}""/ARK4.zip"
 fi
@@ -59,14 +59,14 @@ if [ -f "ArkFast_new.vpk" ]; then
     rm -f ArkFast_new.vpk
 fi
 cd ARK4_tmp/
-mv -f Vita/Standalone/K.BIN ARK_A3000/K.BIN
-zip -r ARK_A3000.zip ARK_A3000
-mv -f ARK_A3000.zip ../ArkFast_tmp/resources/ARK_A3000.zip
+mv -f Vita/Standalone/K.BIN ARK_30000/K.BIN
+zip -r ARK_30000.zip ARK_30000
+mv -f ARK_30000.zip ../ArkFast_tmp/resources/ARK_30000.zip
 cd ..
 rm -rf ARK4_tmp/
 cd ArkFast_tmp/
-sed -i 's/ARK-2/ARK-4/g' script.lua
-sed -i 's/ARK2/ARK-4/g' script.lua
+sed -i 's/ARK-2/ARK-4 A3/g' script.lua
+sed -i 's/ARK2/ARK-4 A3/g' script.lua
 sed -i 's/CLON(s)/CLONE(s)/g' script.lua
 sed -i 's/PSVita /PS Vita /g' script.lua
 zip -r ../ArkFast_new.vpk .

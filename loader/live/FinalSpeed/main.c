@@ -163,8 +163,8 @@ int main(int argc, char *argv[])
         lspath[6] = "ef0:/PSP/APP/NPEG00012/K.BIN";
     }
 
-    if(devkit != 0x06060110 && devkit != 0x06060010)
-        Exit("\nSorry. This program supports only firmwares 6.60 and 6.61!");
+    if(devkit != 0x06060010)
+        Exit("\nSorry. This program supports only firmware 6.61!");
 
     printf("\n FinalSpeed - The Z, frostegater\n\n");
 

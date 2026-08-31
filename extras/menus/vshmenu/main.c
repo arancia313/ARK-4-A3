@@ -22,7 +22,7 @@
 
 /* 
  * avshMenu by krazynez
- * based on PRO vsh, ME vsh, and ultimate vsh, and the Original ARK-4 vshmenu.
+ * based on PRO vsh, ME vsh, and ultimate vsh, and the Original ARK-4 A3 vshmenu.
  * Plus myself and acid_snake's mentally insane thoughts and awesomeness ;-)
  */
 
